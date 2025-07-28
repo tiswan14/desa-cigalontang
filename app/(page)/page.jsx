@@ -1,0 +1,19 @@
+import HeroSection from '../section/beranda/HeroSection'
+import PotensiDesa from '../section/beranda/PotensiDesa'
+import StrukturPemerintahan from '../section/beranda/StrukturPemerintahan'
+import ProfilSingkat from '../section/ProfilSingkat'
+import VideoProfile from '../section/VideoProfile'
+
+export default function Home() {
+    return (
+        <>
+            <HeroSection />
+            <ProfilSingkat />
+            <PotensiDesa />
+            <StrukturPemerintahan />
+            <VideoProfile />
+            {/* <VisiMisi /> */}
+            {/* <LayananPublik /> */}
+        </>
+    )
+}
