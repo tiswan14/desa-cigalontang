@@ -98,7 +98,7 @@ const ProfilSingkatDesa = () => {
                 </div>
             </div>
             <div className='text-center mt-6'>
-                <Link href='/profil-desa'>
+                <Link href='/profil-desa/gambaran-umum'>
                     <button className='cursor-pointer px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg shadow-sm transition-colors inline-flex items-center'>
                         Lihat profil desa lengkap
                         <svg

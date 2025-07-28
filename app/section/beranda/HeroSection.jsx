@@ -18,11 +18,12 @@ const HeroSection = () => {
             <div className='absolute inset-0 z-0'>
                 <Image
                     src='/hero-section.jpeg'
-                    alt='Pemandangan Desa Cigalontang'
+                    alt='Pemandangan Desa'
                     fill
-                    className='object-cover scale-105 transition-transform duration-[10000ms] hover:scale-100'
+                    className='object-cover'
                     quality={100}
                     priority
+                    sizes='(max-width: 768px) 100vw, 100vw'
                 />
                 <div className='absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/80'></div>
                 <div className='absolute inset-0 bg-gradient-to-r from-emerald-900/20 via-transparent to-lime-900/20'></div>
@@ -53,7 +54,7 @@ const HeroSection = () => {
                 <h1
                     data-aos='fade-up'
                     data-aos-delay='400'
-                    className='mb-4 text-4xl font-bold md:text-5xl lg:text-6xl leading-tight'
+                    className='mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight'
                 >
                     <span className='block mb-2 text-gray-200'>
                         Selamat Datang di Website Resmi
@@ -67,7 +68,7 @@ const HeroSection = () => {
                 <h2
                     data-aos='fade-up'
                     data-aos-delay='600'
-                    className='mb-2 text-xl font-medium md:text-2xl text-white/90 flex items-center gap-2 justify-center flex-wrap'
+                    className='mb-2 text-base sm:text-lg md:text-xl text-white/90 flex items-center gap-2 justify-center flex-wrap'
                 >
                     <MapPinCheckIcon className='h-5 w-5 text-emerald-500' />
                     Kecamatan Cigalontang, Kabupaten Tasikmalaya
@@ -77,7 +78,7 @@ const HeroSection = () => {
                 <p
                     data-aos='fade-up'
                     data-aos-delay='800'
-                    className='mb-8 mt-4 max-w-2xl text-sm md:text-xl text-white/80 leading-relaxed'
+                    className='mb-8 mt-4 max-w-2xl text-sm sm:text-base md:text-lg text-white/80 leading-relaxed'
                 >
                     Portal informasi desa dan potensi lokal untuk kemajuan
                     bersama.
@@ -92,7 +93,7 @@ const HeroSection = () => {
                     {/* Tombol 1 - Jelajahi Profil */}
                     <Link
                         href='#profile'
-                        className='group flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 md:px-8 md:py-4 font-semibold text-white text-sm md:text-base transition-all duration-300 hover:bg-emerald-600 hover:shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5 active:translate-y-0'
+                        className='group flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 md:px-8 md:py-4 font-semibold text-white text-xs sm:text-sm md:text-base transition-all duration-300 hover:bg-emerald-600 hover:shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5 active:translate-y-0'
                     >
                         <Compass className='h-5 w-5 group-hover:rotate-12 transition-transform duration-300' />
                         Jelajahi Profil Desa
@@ -100,7 +101,7 @@ const HeroSection = () => {
                     {/* Tombol 2 - Hubungi Kami */}
                     <a
                         href='#kontak'
-                        className='group flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl border-2 border-white/50 px-6 py-3 md:px-8 md:py-4 font-semibold text-white text-sm md:text-base transition-all duration-300 hover:bg-white hover:text-gray-900 hover:border-white hover:shadow-lg hover:shadow-white/25 hover:-translate-y-0.5 active:translate-y-0 backdrop-blur-sm bg-white/5'
+                        className='group flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl border-2 border-white/50 px-6 py-3 md:px-8 md:py-4 font-semibold text-white text-xs sm:text-sm md:text-base transition-all duration-300 hover:bg-white hover:text-gray-900 hover:border-white hover:shadow-lg hover:shadow-white/25 hover:-translate-y-0.5 active:translate-y-0 backdrop-blur-sm bg-white/5'
                     >
                         <Mail className='h-5 w-5 group-hover:scale-110 transition-transform duration-300' />
                         Hubungi Kami
