@@ -54,7 +54,7 @@ const HeroSection = () => {
                 <h1
                     data-aos='fade-up'
                     data-aos-delay='400'
-                    className='mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight'
+                    className='mb-4 text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-bold leading-tight'
                 >
                     <span className='block mb-2 text-gray-200'>
                         Selamat Datang di Website Resmi
@@ -92,20 +92,20 @@ const HeroSection = () => {
                 >
                     {/* Tombol 1 - Jelajahi Profil */}
                     <Link
-                        href='#profile'
-                        className='group flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 md:px-8 md:py-4 font-semibold text-white text-xs sm:text-sm md:text-base transition-all duration-300 hover:bg-emerald-600 hover:shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5 active:translate-y-0'
+                        href='profil-desa'
+                        className='group flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-emerald-600 py-3 md:px-8 md:py-4 font-semibold text-white text-xs sm:text-sm md:text-base transition-all duration-300 hover:bg-emerald-600 hover:shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5 active:translate-y-0'
                     >
                         <Compass className='h-5 w-5 group-hover:rotate-12 transition-transform duration-300' />
                         Jelajahi Profil Desa
                     </Link>
                     {/* Tombol 2 - Hubungi Kami */}
-                    <a
+                    <Link
                         href='#kontak'
                         className='group flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl border-2 border-white/50 px-6 py-3 md:px-8 md:py-4 font-semibold text-white text-xs sm:text-sm md:text-base transition-all duration-300 hover:bg-white hover:text-gray-900 hover:border-white hover:shadow-lg hover:shadow-white/25 hover:-translate-y-0.5 active:translate-y-0 backdrop-blur-sm bg-white/5'
                     >
                         <Mail className='h-5 w-5 group-hover:scale-110 transition-transform duration-300' />
                         Hubungi Kami
-                    </a>
+                    </Link>
                 </div>
             </div>
 
