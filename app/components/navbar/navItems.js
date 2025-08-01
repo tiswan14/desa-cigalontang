@@ -12,6 +12,10 @@ const navItems = [
                 text: 'Gambaran Umum',
             },
             {
+                href: '/profil-desa/visi-misi',
+                text: 'Visi & Misi',
+            },
+            {
                 href: '/profil-desa/demografi',
                 text: 'Demografi',
             },
@@ -25,28 +29,40 @@ const navItems = [
             },
         ],
     },
+
     {
-        href: '/lembaga-desa',
-        text: 'Lembaga Desa',
+        href: '/data-desa',
+        text: 'Data Desa',
         children: [
-            {
-                href: '/lembaga-desa/bpd',
-                text: 'Badan Permusyawaratan Desa (BPD)',
-            },
-            {
-                href: '/lembaga-desa/lpm',
-                text: 'Lembaga Pemberdayaan Masyarakat (LPM)',
-            },
-            {
-                href: '/lembaga-desa/mui',
-                text: 'Majelis Ulama Indonesia (MUI)',
-            },
-            {
-                href: '/lembaga-desa/karang-taruna',
-                text: 'Karang Taruna',
-            },
+            { href: '/data-desa/pendidikan', text: 'Pendidikan' },
+            { href: '/data-desa/jenis-kelamin', text: 'Jenis Kelamin' },
+            { href: '/data-desa/usia', text: 'Kelompok Usia' },
+            { href: '/data-desa/kependudukan', text: 'Kependudukan' },
         ],
     },
+
+    // {
+    //     href: '/lembaga-desa',
+    //     text: 'Lembaga Desa',
+    //     children: [
+    //         {
+    //             href: '/lembaga-desa/bpd',
+    //             text: 'Badan Permusyawaratan Desa (BPD)',
+    //         },
+    //         {
+    //             href: '/lembaga-desa/lpm',
+    //             text: 'Lembaga Pemberdayaan Masyarakat (LPM)',
+    //         },
+    //         {
+    //             href: '/lembaga-desa/mui',
+    //             text: 'Majelis Ulama Indonesia (MUI)',
+    //         },
+    //         {
+    //             href: '/lembaga-desa/karang-taruna',
+    //             text: 'Karang Taruna',
+    //         },
+    //     ],
+    // },
     {
         href: '/potensi-desa',
         text: 'Potensi Desa',
@@ -65,10 +81,7 @@ const navItems = [
             },
         ],
     },
-    {
-        href: '/sarana-prasarana',
-        text: 'Fasilitas Desa',
-    },
+
     {
         href: '/pendidikan-kesehatan',
         text: 'Pendidikan & Kesehatan',

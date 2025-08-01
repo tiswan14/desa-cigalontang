@@ -4,7 +4,7 @@ const VisiMisi = () => {
     return (
         <section
             id='visi-misi'
-            className='py-16 bg-gradient-to-b from-white to-lime-50'
+            className='py-18 bg-gradient-to-b from-white to-lime-50'
         >
             <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
                 {/* Header */}

@@ -109,28 +109,6 @@ const HeroSection = () => {
                 </div>
             </div>
 
-            {/* Watermark KKN */}
-            <div
-                data-aos='fade-left'
-                data-aos-delay='1200'
-                className='absolute hidden md:flex bottom-6 right-6 z-20 text-white text-xs md:text-sm font-light leading-relaxed tracking-wide bg-black/40 px-4 py-3 rounded-xl backdrop-blur-md border border-white/20 shadow-lg hover:bg-black/50 transition-all duration-300'
-            >
-                <div className='text-center'>
-                    <div className='flex items-center gap-2 mb-1'>
-                        <div className='w-2 h-2 bg-emerald-400 rounded-full animate-pulse'></div>
-                        <span className='font-semibold text-emerald-400'>
-                            Desa Cigalontang x KKN UNPER 2025
-                        </span>
-                    </div>
-                    <div className='text-white/80'>
-                        Bersinergi dalam pembangunan desa
-                    </div>
-                    <div className='text-white/80'>
-                        berbasis teknologi dan partisipasi masyarakat.
-                    </div>
-                </div>
-            </div>
-
             {/* Bottom Fade */}
             <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/20 to-transparent z-5'></div>
         </section>

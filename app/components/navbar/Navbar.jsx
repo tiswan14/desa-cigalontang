@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import NavItem from './NavItem'
 import MobileNavItem from './MobileNavItem'
@@ -8,11 +8,16 @@ import navItems from './navItems'
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [activeLink, setActiveLink] = useState('/')
+    const [openDropdown, setOpenDropdown] = useState(null)
+
+    const toggleDropdown = (href) => {
+        setOpenDropdown(openDropdown === href ? null : href)
+    }
 
     return (
         <nav className='fixed top-0 left-0 w-full z-50 py-2 bg-white text-black border-b border-gray-200 shadow-sm transition-all duration-300'>
             <div className='container mx-auto px-4'>
-                <div className='flex justify-between items-center h-12 md:h-16'>
+                <div className='flex justify-between items-center h-14'>
                     {/* Logo */}
                     <div className='flex items-center h-20'>
                         <Link
@@ -41,31 +46,38 @@ const Navbar = () => {
                         {navItems.map((item) => (
                             <div
                                 key={item.href}
-                                className='relative group'
+                                className='relative'
                             >
                                 <NavItem
                                     {...item}
                                     isActive={activeLink === item.href}
+                                    isDropdownOpen={openDropdown === item.href}
+                                    toggleDropdown={() =>
+                                        toggleDropdown(item.href)
+                                    }
                                     onClick={() => setActiveLink(item.href)}
-                                    textColor='text-black'
-                                    hoverColor='hover:text-[#0e8038]' // Tambahkan jika kamu dukung prop ini
+                                    hasChildren={!!item.children}
                                 />
-                                {item.children && (
-                                    <div className='absolute top-full left-0 bg-white text-black rounded shadow-md opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-300 min-w-[180px] z-50'>
-                                        {item.children.map((child) => (
-                                            <Link
-                                                key={child.href}
-                                                href={child.href}
-                                                className='block px-4 py-2 hover:bg-gray-100 text-sm hover:text-[#0e8038]'
-                                                onClick={() =>
-                                                    setActiveLink(child.href)
-                                                }
-                                            >
-                                                {child.text}
-                                            </Link>
-                                        ))}
-                                    </div>
-                                )}
+                                {item.children &&
+                                    openDropdown === item.href && (
+                                        <div className='absolute top-full left-0 bg-white text-black rounded shadow-md min-w-[180px] z-50'>
+                                            {item.children.map((child) => (
+                                                <Link
+                                                    key={child.href}
+                                                    href={child.href}
+                                                    className='block px-4 py-2 hover:bg-gray-100 text-sm hover:text-[#0e8038]'
+                                                    onClick={() => {
+                                                        setActiveLink(
+                                                            child.href
+                                                        )
+                                                        setOpenDropdown(null)
+                                                    }}
+                                                >
+                                                    {child.text}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    )}
                             </div>
                         ))}
                     </div>
@@ -107,10 +119,10 @@ const Navbar = () => {
             {/* Mobile Menu */}
             <div
                 className={`md:hidden overflow-hidden transition-all duration-300 
-        bg-white text-black 
-        ${isOpen ? 'max-h-[800px] py-3' : 'max-h-0 py-0'}`}
+                    bg-white text-black 
+                    ${isOpen ? 'max-h-[800px] py-3' : 'max-h-0 py-0'}`}
             >
-                <div className='px-4 space-y-3'>
+                <div className='px-4 space-y-3 text-lg'>
                     {navItems.map((item) => (
                         <div key={item.href}>
                             <MobileNavItem
@@ -120,22 +132,7 @@ const Navbar = () => {
                                     setActiveLink(item.href)
                                     setIsOpen(false)
                                 }}
-                                activeColor='#0e8038'
                             />
-                            {item.children &&
-                                item.children.map((child) => (
-                                    <MobileNavItem
-                                        key={child.href}
-                                        {...child}
-                                        text={`— ${child.text}`}
-                                        isActive={activeLink === child.href}
-                                        onClick={() => {
-                                            setActiveLink(child.href)
-                                            setIsOpen(false)
-                                        }}
-                                        activeColor='#0e8038'
-                                    />
-                                ))}
                         </div>
                     ))}
                 </div>

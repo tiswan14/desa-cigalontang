@@ -4,7 +4,6 @@ import Navbar from './components/navbar/Navbar'
 import Footer from './components/Footer'
 import AOSProvider from './components/AOSProvider'
 
-// Konfigurasi font Poppins
 const poppins = Poppins({
     variable: '--font-poppins',
     subsets: ['latin'],
