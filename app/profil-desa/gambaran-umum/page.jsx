@@ -7,6 +7,8 @@ import {
     CloudRain,
     LandPlot,
     Users,
+    MapPinned,
+    Landmark,
 } from 'lucide-react'
 
 const GambaranUmumPage = () => {
@@ -34,51 +36,73 @@ const GambaranUmumPage = () => {
 
     return (
         <div className='bg-gradient-to-br from-emerald-50 to-white'>
-            <div className='bg-gradient-to-r from-emerald-600 to-emerald-500 text-white py-18'>
-                <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
-                    {/* Header Title */}
-                    <div
-                        className='text-center'
-                        data-aos='fade-down'
-                    >
-                        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
+            <header className='relative bg-gradient-to-r from-emerald-600 to-emerald-500 h-[40vh] mt-20 text-white overflow-hidden'>
+                {/* Background Dekoratif */}
+                <div className='absolute inset-0 opacity-10 z-0'>
+                    <div className='absolute top-0 right-0 w-32 h-32 bg-white rounded-full -mr-16 -mt-16'></div>
+                    <div className='absolute bottom-0 left-0 w-64 h-64 bg-white rounded-full -ml-32 -mb-32'></div>
+                </div>
+
+                {/* Konten Tengah */}
+                <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-center w-full px-2 sm:px-4 md:px-6'>
+                    <div className='inline-flex items-center justify-center mb-4'>
+                        <Landmark className='w-10 h-10 md:w-12 md:h-12 text-emerald-200 mr-3' />
+
+                        <h1 className='text-3xl md:text-4xl font-bold'>
                             Gambaran Umum Desa
                         </h1>
-                        <p className='text-emerald-100 text-lg md:text-xl'>
-                            Desa Cigalontang
-                        </p>
                     </div>
 
-                    {/* Breadcrumb Path */}
-                    <div
-                        className='mt-6'
-                        data-aos='fade-right'
+                    <p className='text-lg md:text-xl font-medium text-emerald-100 mx-auto max-w-4xl'>
+                        Desa Cigalontang merupakan salah satu desa di Kecamatan
+                        Cigalontang yang memiliki kekayaan alam, pembagian
+                        wilayah, serta kondisi geografis yang mendukung
+                        kehidupan masyarakat.
+                    </p>
+
+                    {/* Breadcrumb */}
+                    <nav
+                        className='mt-6 flex justify-center items-center text-sm font-medium text-emerald-100'
+                        aria-label='Breadcrumb'
                     >
-                        <nav
-                            className='flex justify-center items-center text-sm text-white/80 space-x-2'
-                            aria-label='Breadcrumb'
+                        <a
+                            href='/'
+                            className='hover:text-white transition-colors duration-200'
                         >
-                            <a
-                                href='/'
-                                className='hover:underline hover:text-white font-medium transition-colors'
-                            >
-                                Beranda
-                            </a>
-                            <span>/</span>
-                            <a
-                                href='/profil-desa'
-                                className='hover:underline hover:text-white font-medium transition-colors'
-                            >
-                                Profil Desa
-                            </a>
-                            <span>/</span>
-                            <span className='text-white font-semibold'>
-                                Gambaran Umum
-                            </span>
-                        </nav>
-                    </div>
+                            Beranda
+                        </a>
+                        <svg
+                            className='w-4 h-4 mx-2'
+                            fill='currentColor'
+                            viewBox='0 0 20 20'
+                        >
+                            <path
+                                fillRule='evenodd'
+                                d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z'
+                                clipRule='evenodd'
+                            />
+                        </svg>
+                        <a
+                            href='/profil-desa'
+                            className='hover:text-white transition-colors duration-200'
+                        >
+                            Profil Desa
+                        </a>
+                        <svg
+                            className='w-4 h-4 mx-2'
+                            fill='currentColor'
+                            viewBox='0 0 20 20'
+                        >
+                            <path
+                                fillRule='evenodd'
+                                d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z'
+                                clipRule='evenodd'
+                            />
+                        </svg>
+                        <span className='text-white'>Gambaran Umum</span>
+                    </nav>
                 </div>
-            </div>
+            </header>
 
             <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-12'>
                 <div className='max-w-7xl mx-auto'>

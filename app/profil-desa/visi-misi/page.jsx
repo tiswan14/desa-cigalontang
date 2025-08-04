@@ -1,4 +1,4 @@
-import { ChevronRight, Goal, ListChecks } from 'lucide-react'
+import { ChevronRight, Goal, ListChecks, TrendingUp } from 'lucide-react'
 import React from 'react'
 
 const VisiMisiPage = () => {
@@ -18,52 +18,74 @@ const VisiMisiPage = () => {
     return (
         <div className='min-h-screen bg-gradient-to-br from-emerald-50 to-white py-[80px]'>
             {/* Header dengan gradient background */}
-            <div
-                className='bg-gradient-to-r from-emerald-600 to-emerald-500 text-white py-12 md:py-16'
-                data-aos='fade-down'
-                data-aos-duration='1000'
-            >
-                <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
-                    <div className='text-center'>
-                        {/* Judul dan Subjudul */}
-                        <h1 className='text-2xl md:text-5xl font-bold mb-2 md:mb-4'>
+            <header className='relative bg-gradient-to-r from-emerald-600 to-emerald-500 h-[40vh] text-white overflow-hidden'>
+                {/* Background Dekoratif */}
+                <div className='absolute inset-0 opacity-10 z-0'>
+                    <div className='absolute top-0 right-0 w-32 h-32 bg-white rounded-full -mr-16 -mt-16'></div>
+                    <div className='absolute bottom-0 left-0 w-64 h-64 bg-white rounded-full -ml-32 -mb-32'></div>
+                </div>
+
+                {/* Konten Tengah */}
+                <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-center w-full px-2 sm:px-4 md:px-6'>
+                    <div className='inline-flex items-center justify-center mb-4'>
+                        {/* Lucide Target icon */}
+                        <TrendingUp className='w-10 h-10 md:w-12 md:h-12 text-emerald-200 mr-3' />
+
+                        <h1 className='text-3xl md:text-4xl font-bold'>
                             Visi dan Misi
                         </h1>
-                        <p className='text-base md:text-xl text-emerald-100'>
-                            Desa Cigalontang
-                        </p>
-
-                        {/* Breadcrumb */}
-                        <div
-                            className='mt-4'
-                            data-aos='fade-right'
-                        >
-                            <nav
-                                className='flex justify-center items-center text-sm text-white/80 space-x-2'
-                                aria-label='Breadcrumb'
-                            >
-                                <a
-                                    href='/'
-                                    className='hover:text-white hover:underline font-medium transition'
-                                >
-                                    Beranda
-                                </a>
-                                <span>/</span>
-                                <a
-                                    href='/profil-desa'
-                                    className='hover:text-white hover:underline font-medium transition'
-                                >
-                                    Profil Desa
-                                </a>
-                                <span>/</span>
-                                <span className='text-white font-semibold'>
-                                    Visi & Misi
-                                </span>
-                            </nav>
-                        </div>
                     </div>
+
+                    <p className='text-lg md:text-xl font-medium text-emerald-100 mx-auto max-w-4xl'>
+                        Menjadi desa yang maju, mandiri, dan sejahtera dengan
+                        pelayanan publik yang transparan, pembangunan
+                        berkelanjutan, serta partisipasi aktif seluruh
+                        masyarakat.
+                    </p>
+
+                    {/* Breadcrumb */}
+                    <nav
+                        className='mt-6 flex justify-center items-center text-sm font-medium text-emerald-100'
+                        aria-label='Breadcrumb'
+                    >
+                        <a
+                            href='/'
+                            className='hover:text-white transition-colors duration-200'
+                        >
+                            Beranda
+                        </a>
+                        <svg
+                            className='w-4 h-4 mx-2'
+                            fill='currentColor'
+                            viewBox='0 0 20 20'
+                        >
+                            <path
+                                fillRule='evenodd'
+                                d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z'
+                                clipRule='evenodd'
+                            />
+                        </svg>
+                        <a
+                            href='/profil-desa'
+                            className='hover:text-white transition-colors duration-200'
+                        >
+                            Profil Desa
+                        </a>
+                        <svg
+                            className='w-4 h-4 mx-2'
+                            fill='currentColor'
+                            viewBox='0 0 20 20'
+                        >
+                            <path
+                                fillRule='evenodd'
+                                d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z'
+                                clipRule='evenodd'
+                            />
+                        </svg>
+                        <span className='text-white'>Visi & Misi</span>
+                    </nav>
                 </div>
-            </div>
+            </header>
 
             {/* Main Content */}
             <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12'>

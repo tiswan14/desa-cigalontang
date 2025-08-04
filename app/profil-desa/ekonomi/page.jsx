@@ -13,51 +13,80 @@ export default function EkonomiPage() {
     return (
         <div className='min-h-screen bg-gradient-to-b from-emerald-50 to-white py-20'>
             {/* Header Section */}
-            <header className='bg-gradient-to-r from-emerald-600 to-emerald-500 py-12 text-center text-white'>
-                <div className='container mx-auto px-4'>
-                    <h1
-                        className='text-3xl md:text-4xl font-bold mb-2'
-                        data-aos='fade-down'
-                    >
-                        Ekonomi Desa Cigalontang
-                    </h1>
-                    <p
-                        className='text-lg md:text-xl font-medium max-w-2xl mx-auto'
-                        data-aos='fade-down'
-                        data-aos-delay='100'
-                    >
+            <header className='relative bg-gradient-to-r from-emerald-600 to-emerald-500 h-[40vh] text-white overflow-hidden'>
+                {/* Background Dekoratif */}
+                <div className='absolute inset-0 opacity-10 z-0'>
+                    <div className='absolute top-0 right-0 w-32 h-32 bg-white rounded-full -mr-16 -mt-16'></div>
+                    <div className='absolute bottom-0 left-0 w-64 h-64 bg-white rounded-full -ml-32 -mb-32'></div>
+                </div>
+
+                {/* Konten Tengah */}
+                <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-center w-full px-2 sm:px-4 md:px-6'>
+                    <div className='inline-flex items-center justify-center mb-4'>
+                        <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            className='w-10 h-10 md:w-12 md:h-12 text-emerald-200 mr-3'
+                            viewBox='0 0 24 24'
+                            fill='none'
+                            stroke='currentColor'
+                            strokeWidth='2'
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                        >
+                            <path d='M4 4h16v16H4z' />
+                            <path d='M9 9h6v6H9z' />
+                        </svg>
+                        <h1 className='text-3xl md:text-4xl font-bold'>
+                            Ekonomi Desa Cigalontang
+                        </h1>
+                    </div>
+
+                    <p className='text-lg md:text-xl font-medium text-emerald-100 mx-auto max-w-4xl'>
                         Gambaran umum tingkat kesejahteraan, pekerjaan utama,
                         dan arah pembangunan ekonomi.
                     </p>
 
                     {/* Breadcrumb */}
-                    <div
-                        className='mt-4'
-                        data-aos='fade-right'
+                    <nav
+                        className='mt-6 flex justify-center items-center text-sm font-medium text-emerald-100'
+                        aria-label='Breadcrumb'
                     >
-                        <nav
-                            className='flex justify-center items-center text-sm text-white/80 space-x-2'
-                            aria-label='Breadcrumb'
+                        <a
+                            href='/'
+                            className='hover:text-white transition-colors duration-200'
                         >
-                            <a
-                                href='/'
-                                className='hover:text-white hover:underline font-medium transition'
-                            >
-                                Beranda
-                            </a>
-                            <span>/</span>
-                            <a
-                                href='/profil-desa'
-                                className='hover:text-white hover:underline font-medium transition'
-                            >
-                                Profil Desa
-                            </a>
-                            <span>/</span>
-                            <span className='text-white font-semibold'>
-                                Ekonomi
-                            </span>
-                        </nav>
-                    </div>
+                            Beranda
+                        </a>
+                        <svg
+                            className='w-4 h-4 mx-2'
+                            fill='currentColor'
+                            viewBox='0 0 20 20'
+                        >
+                            <path
+                                fillRule='evenodd'
+                                d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z'
+                                clipRule='evenodd'
+                            />
+                        </svg>
+                        <a
+                            href='/profil-desa'
+                            className='hover:text-white transition-colors duration-200'
+                        >
+                            Profil Desa
+                        </a>
+                        <svg
+                            className='w-4 h-4 mx-2'
+                            fill='currentColor'
+                            viewBox='0 0 20 20'
+                        >
+                            <path
+                                fillRule='evenodd'
+                                d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z'
+                                clipRule='evenodd'
+                            />
+                        </svg>
+                        <span className='text-white'>Ekonomi</span>
+                    </nav>
                 </div>
             </header>
 

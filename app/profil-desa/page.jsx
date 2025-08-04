@@ -55,15 +55,15 @@ export default function ProfilDesaPage() {
     return (
         <div className='min-h-screen bg-gray-50'>
             {/* Header Section */}
-            <header className='relative bg-gradient-to-r from-emerald-600 to-emerald-500 h-[50vh] text-white overflow-hidden mt-18'>
+            <header className='relative bg-gradient-to-r from-emerald-600 to-emerald-500 h-[50vh] mt-20 text-white overflow-hidden'>
                 {/* Background Dekoratif */}
                 <div className='absolute inset-0 opacity-10 z-0'>
                     <div className='absolute top-0 right-0 w-32 h-32 bg-white rounded-full -mr-16 -mt-16'></div>
                     <div className='absolute bottom-0 left-0 w-64 h-64 bg-white rounded-full -ml-32 -mb-32'></div>
                 </div>
 
-                {/* Konten yang benar-benar center */}
-                <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-center px-4'>
+                {/* Konten Tengah */}
+                <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-center w-full px-2 sm:px-4 md:px-6'>
                     <div className='inline-flex items-center justify-center mb-4'>
                         <Building2
                             className='w-10 h-10 md:w-12 md:h-12 text-emerald-200 mr-3'
@@ -74,7 +74,7 @@ export default function ProfilDesaPage() {
                         </h1>
                     </div>
 
-                    <p className='text-lg md:text-xl font-medium max-w-2xl text-emerald-100 mx-auto'>
+                    <p className='text-lg md:text-xl font-medium text-emerald-100 mx-auto max-w-4xl'>
                         Mengenal lebih dekat Desa Cigalontang melalui berbagai
                         aspek mulai dari sejarah, demografi, ekonomi, hingga
                         struktur pemerintahan.

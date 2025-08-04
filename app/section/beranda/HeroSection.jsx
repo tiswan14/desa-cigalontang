@@ -92,7 +92,7 @@ const HeroSection = () => {
                 >
                     {/* Tombol 1 - Jelajahi Profil */}
                     <Link
-                        href='profil-desa'
+                        href='/profil-desa'
                         className='group flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-emerald-600 py-3 md:px-8 md:py-4 font-semibold text-white text-xs sm:text-sm md:text-base transition-all duration-300 hover:bg-emerald-600 hover:shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5 active:translate-y-0'
                     >
                         <Compass className='h-5 w-5 group-hover:rotate-12 transition-transform duration-300' />
