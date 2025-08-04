@@ -187,7 +187,7 @@ const ProfilSingkatDesa = () => {
                 data-aos='fade-up'
                 data-aos-delay='400'
             >
-                <Link href='/profil-desa/gambaran-umum'>
+                <Link href='/profil-desa'>
                     <button className='cursor-pointer px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg shadow-sm transition-colors inline-flex items-center'>
                         Lihat profil desa lengkap
                         <svg

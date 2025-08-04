@@ -18,12 +18,10 @@ const DataPendidikan = () => {
         { pendidikan: 'SD', jumlah: 2543, color: '#3b82f6' },
         { pendidikan: 'SMP', jumlah: 106, color: '#10b981' },
         { pendidikan: 'SLTA', jumlah: 104, color: '#f59e0b' },
-        { pendidikan: 'D1', jumlah: 0, color: '#8b5cf6' },
         { pendidikan: 'D2', jumlah: 2, color: '#ec4899' },
         { pendidikan: 'D3', jumlah: 10, color: '#06b6d4' },
         { pendidikan: 'S1', jumlah: 26, color: '#84cc16' },
         { pendidikan: 'S2', jumlah: 3, color: '#f97316' },
-        { pendidikan: 'S3', jumlah: 0, color: '#6366f1' },
     ]
 
     // Data pendidikan per dusun

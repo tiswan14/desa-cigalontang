@@ -28,13 +28,7 @@ export default function ProfilDesaPage() {
             href: '/profil-desa/visi-misi',
             color: 'from-blue-500 to-blue-600',
         },
-        {
-            title: 'Demografi',
-            description: 'Data kependudukan dan karakteristik masyarakat desa',
-            icon: Users,
-            href: '/profil-desa/demografi',
-            color: 'from-purple-500 to-purple-600',
-        },
+
         {
             title: 'Ekonomi',
             description:

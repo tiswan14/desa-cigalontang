@@ -17,7 +17,7 @@ const HeroSection = () => {
             {/* Background Image dengan Enhanced Overlay */}
             <div className='absolute inset-0 z-0'>
                 <Image
-                    src='/hero-section.jpeg'
+                    src='/sawah.jpg'
                     alt='Pemandangan Desa'
                     fill
                     className='object-cover'

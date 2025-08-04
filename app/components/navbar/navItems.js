@@ -15,10 +15,7 @@ const navItems = [
                 href: '/profil-desa/visi-misi',
                 text: 'Visi & Misi',
             },
-            {
-                href: '/profil-desa/demografi',
-                text: 'Demografi',
-            },
+
             {
                 href: '/profil-desa/ekonomi',
                 text: 'Ekonomi',
@@ -83,19 +80,10 @@ const navItems = [
     },
 
     {
-        href: '/pendidikan-kesehatan',
-        text: 'Pendidikan & Kesehatan',
-        children: [
-            {
-                href: '/pendidikan-kesehatan/pendidikan',
-                text: 'Lembaga Pendidikan',
-            },
-            {
-                href: '/pendidikan-kesehatan/kesehatan',
-                text: 'Fasilitas Kesehatan',
-            },
-        ],
+        href: '/wisata-desa',
+        text: 'Wisata Desa',
     },
+
     {
         href: '/kontak',
         text: 'Hubungi Kami',
