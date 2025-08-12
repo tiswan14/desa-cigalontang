@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://desa-cigalontang.vercel.app/sitemap.xml
