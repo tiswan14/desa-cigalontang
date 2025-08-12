@@ -100,7 +100,7 @@ const HeroSection = () => {
                     </Link>
                     {/* Tombol 2 - Hubungi Kami */}
                     <Link
-                        href='#kontak'
+                        href='/kontak'
                         className='group flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl border-2 border-white/50 px-6 py-3 md:px-8 md:py-4 font-semibold text-white text-xs sm:text-sm md:text-base transition-all duration-300 hover:bg-white hover:text-gray-900 hover:border-white hover:shadow-lg hover:shadow-white/25 hover:-translate-y-0.5 active:translate-y-0 backdrop-blur-sm bg-white/5'
                     >
                         <Mail className='h-5 w-5 group-hover:scale-110 transition-transform duration-300' />

@@ -103,9 +103,8 @@ export default function ContactPage() {
                                         Alamat
                                     </h3>
                                     <p className='text-gray-600'>
-                                        Jl. Raya Cigalontang No. 123, Kecamatan
-                                        Cigalontang, Kabupaten Tasikmalaya, Jawa
-                                        Barat
+                                        Desa Cigalontang, Kec. Cigalontang,
+                                        Kabupaten Tasikmalaya, Jawa Barat 46463
                                     </p>
                                 </div>
                             </div>
@@ -147,7 +146,7 @@ export default function ContactPage() {
                                         Jam Operasional
                                     </h3>
                                     <p className='text-gray-600'>
-                                        Senin – Jumat, 08.00 – 16.00 WIB
+                                        Senin – Jumat, 08.00 – 15.00 WIB
                                     </p>
                                 </div>
                             </div>
@@ -156,14 +155,14 @@ export default function ContactPage() {
                         {/* Google Maps Embed */}
                         <div className='mt-8 rounded-xl overflow-hidden border border-gray-200'>
                             <iframe
-                                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.798511757686!2d107.6182903152946!3d-6.917720369411785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7b9e8a2a8a9%3A0x2e7b9e8a2a8a9a9!2sTasikmalaya%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1620000000000!5m2!1sen!2sid'
-                                width='100%'
-                                height='300'
+                                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.254501234792!2d108.08439207499613!3d-7.349675992654183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f578cd79c1d71%3A0x1e4b77b74b3a41e7!2sCigalontang%2C%20Tasikmalaya%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1691756234567!5m2!1sen!2sid'
+                                width='600'
+                                height='450'
                                 style={{ border: 0 }}
                                 allowFullScreen=''
                                 loading='lazy'
-                                className='rounded-xl'
-                            ></iframe>
+                                referrerPolicy='no-referrer-when-downgrade'
+                            />
                         </div>
                     </div>
 
