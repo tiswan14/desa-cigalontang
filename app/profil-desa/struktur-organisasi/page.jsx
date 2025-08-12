@@ -186,7 +186,7 @@ const StrukturOrganisasi = () => {
                                         }`}
                                     >
                                         {/* Photo Section */}
-                                        <div className='relative h-64 overflow-hidden bg-gray-100'>
+                                        <div className='relative h-72 sm:h-64 overflow-hidden bg-gray-100'>
                                             {pejabat.foto ? (
                                                 <img
                                                     src={pejabat.foto}
