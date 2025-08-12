@@ -9,12 +9,17 @@ export default function Home() {
     return (
         <>
             <Head>
+
                 {/* SEO Basics */}
                 <title>Profil Desa Cigalontang | Website Resmi Desa</title>
                 <meta
                     name='description'
                     content='Website resmi Desa Cigalontang, Kecamatan Cigalontang, Kabupaten Tasikmalaya. Informasi profil desa, potensi unggulan, struktur pemerintahan, dan layanan publik.'
                 />
+                <link
+                    rel='canonical'
+                    href='https://desa-cigalontang.vercel.app/'
+                    />
                 <meta
                     name='keywords'
                     content='Desa Cigalontang, Profil Desa, Potensi Desa, Tasikmalaya, Jawa Barat'

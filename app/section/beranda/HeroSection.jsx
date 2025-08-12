@@ -1,19 +1,15 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import {
-    Compass,
-    Mail,
-    MapPin,
-    MapPinCheck,
-    MapPinCheckIcon,
-    Users,
-} from 'lucide-react'
+import { Compass, Mail, MapPin, MapPinCheckIcon } from 'lucide-react'
 import Link from 'next/link'
 
 const HeroSection = () => {
     return (
-        <section className='relative h-screen min-h-[500px] w-full overflow-hidden mt-8 md:mt-3 md:py-0'>
+        <section
+            className='relative h-screen min-h-[500px] w-full overflow-hidden mt-8 md:mt-3 md:py-0'
+            aria-label='Hero Section Desa Cigalontang'
+        >
             {/* Background Image dengan Enhanced Overlay */}
             <div className='absolute inset-0 z-0'>
                 <Image

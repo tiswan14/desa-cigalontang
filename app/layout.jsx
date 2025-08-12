@@ -4,6 +4,9 @@ import Navbar from './components/navbar/Navbar'
 import Footer from './components/Footer'
 import AOSProvider from './components/AOSProvider'
 
+// Import SpeedInsights
+import { SpeedInsights } from '@vercel/speed-insights/next'
+
 const poppins = Poppins({
     variable: '--font-poppins',
     subsets: ['latin'],
@@ -29,6 +32,10 @@ export default function RootLayout({ children }) {
             <body className={`${poppins.variable} antialiased`}>
                 <Navbar />
                 <AOSProvider />
+
+                {/* Speed Insights */}
+                <SpeedInsights />
+
                 {children}
                 <Footer />
             </body>
