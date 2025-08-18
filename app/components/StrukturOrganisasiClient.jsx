@@ -26,13 +26,13 @@ const StrukturOrganisasiClient = () => {
                     foto: '/momo.png',
                 },
                 {
-                    nama: 'Dedin',
-                    jabatan: 'Kaur Umum/Tata Usaha',
+                    nama: 'Dedin S.Kom',
+                    jabatan: 'Kasi Tata Usaha',
                     sk: 'SK: 141.1/01/2017',
                     foto: '/dedin.png',
                 },
                 {
-                    nama: 'Yuda Brahmantiar',
+                    nama: 'Yuda Brahmantiar S.Ip',
                     jabatan: 'Kaur Perencanaan',
                     sk: 'SK: 141.1/02/2017',
                     foto: '/yuda.png',
@@ -45,7 +45,7 @@ const StrukturOrganisasiClient = () => {
                 },
                 {
                     nama: 'Wawan Sutiawan',
-                    jabatan: 'Kasi Kesejahteraan',
+                    jabatan: 'Kasi Kesra',
                     sk: 'SK: 141.1/01/2016',
                     foto: '/wawan.png',
                 },
