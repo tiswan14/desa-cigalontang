@@ -11,6 +11,12 @@ import {
     Landmark,
 } from 'lucide-react'
 
+export const metadata = {
+    title: 'Gambaran Umum - Desa Cigalontang',
+    description:
+        'Gambaran umum wilayah, demografi, dan kondisi Desa Cigalontang.',
+}
+
 const GambaranUmumPage = () => {
     const penggunaanLahan = [
         ['Sawah', '196,2 Ha'],

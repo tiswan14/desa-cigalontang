@@ -1,5 +1,9 @@
-import { ChevronRight, Goal, ListChecks, TrendingUp } from 'lucide-react'
-import React from 'react'
+import { Goal, ListChecks, TrendingUp } from 'lucide-react'
+export const metadata = {
+    title: 'Visi & Misi - Desa Cigalontang',
+    description:
+        'Visi dan misi Desa Cigalontang dalam membangun komunitas yang maju dan berkelanjutan.',
+}
 
 const VisiMisiPage = () => {
     const visi =

@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import { useState } from 'react'
 import {
     MapPin,
     Phone,
@@ -11,6 +12,7 @@ import {
     Heart,
 } from 'lucide-react'
 import Image from 'next/image'
+import { ChevronDown, ChevronRight } from 'lucide-react'
 
 const Footer = () => {
     const currentYear = new Date().getFullYear()
@@ -24,6 +26,16 @@ const Footer = () => {
         { href: '/berita', label: 'Berita & Info' },
         { href: '/kontak', label: 'Kontak' },
     ]
+    const [openMenu, setOpenMenu] = useState(null)
+
+    // Fungsi untuk toggle menu
+    const toggleMenu = (menuName) => {
+        if (openMenu === menuName) {
+            setOpenMenu(null) // Tutup menu jika sudah terbuka
+        } else {
+            setOpenMenu(menuName) // Buka menu baru
+        }
+    }
 
     const contactInfo = [
         {
@@ -140,19 +152,204 @@ const Footer = () => {
                             Navigasi Cepat
                         </h3>
                         <ul className='space-y-3'>
-                            {navigationLinks.map((link, index) => (
-                                <li key={index}>
-                                    <Link
-                                        href={link.href}
-                                        className='group flex items-center text-gray-300 hover:text-emerald-400 transition-colors duration-300'
-                                    >
-                                        <span className='w-2 h-2 bg-emerald-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></span>
-                                        <span className='group-hover:translate-x-1 transition-transform duration-300'>
-                                            {link.label}
-                                        </span>
-                                    </Link>
-                                </li>
-                            ))}
+                            {/* Beranda */}
+                            <li className='group'>
+                                <Link
+                                    href='/'
+                                    className='flex items-center text-gray-300 hover:text-emerald-400 transition-colors duration-300'
+                                >
+                                    <span className='w-2 h-2 bg-emerald-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></span>
+                                    <span className='group-hover:translate-x-1 transition-transform duration-300'>
+                                        Beranda
+                                    </span>
+                                </Link>
+                            </li>
+
+                            {/* Profil Desa */}
+                            <li className='group'>
+                                <div
+                                    onClick={() => toggleMenu('profil-desa')}
+                                    className='flex items-center text-gray-300 hover:text-emerald-400 transition-colors duration-300 cursor-pointer select-none'
+                                >
+                                    <span className='w-2 h-2 bg-emerald-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></span>
+                                    <span className='group-hover:translate-x-1 transition-transform duration-300'>
+                                        Profil Desa
+                                    </span>
+                                    <span className='ml-2 transition-transform duration-300'>
+                                        {openMenu === 'profil-desa' ? (
+                                            <ChevronDown className='w-4 h-4' />
+                                        ) : (
+                                            <ChevronRight className='w-4 h-4' />
+                                        )}
+                                    </span>
+                                </div>
+                                {openMenu === 'profil-desa' && (
+                                    <ul className='ml-6 mt-2 space-y-2 border-l border-gray-600 pl-4'>
+                                        <li>
+                                            <Link
+                                                href='/profil-desa/gambaran-umum'
+                                                className='block text-gray-400 hover:text-emerald-400 transition-colors duration-300'
+                                            >
+                                                Gambaran Umum
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                href='/profil-desa/visi-misi'
+                                                className='block text-gray-400 hover:text-emerald-400 transition-colors duration-300'
+                                            >
+                                                Visi & Misi
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                href='/profil-desa/ekonomi'
+                                                className='block text-gray-400 hover:text-emerald-400 transition-colors duration-300'
+                                            >
+                                                Ekonomi
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                href='/profil-desa/struktur-organisasi'
+                                                className='block text-gray-400 hover:text-emerald-400 transition-colors duration-300'
+                                            >
+                                                Struktur Organisasi
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                )}
+                            </li>
+
+                            {/* Data Desa */}
+                            <li className='group'>
+                                <div
+                                    onClick={() => toggleMenu('data-desa')}
+                                    className='flex items-center text-gray-300 hover:text-emerald-400 transition-colors duration-300 cursor-pointer select-none'
+                                >
+                                    <span className='w-2 h-2 bg-emerald-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></span>
+                                    <span className='group-hover:translate-x-1 transition-transform duration-300'>
+                                        Data Desa
+                                    </span>
+                                    <span className='ml-2 transition-transform duration-300'>
+                                        {openMenu === 'data-desa' ? (
+                                            <ChevronDown className='w-4 h-4' />
+                                        ) : (
+                                            <ChevronRight className='w-4 h-4' />
+                                        )}
+                                    </span>
+                                </div>
+                                {openMenu === 'data-desa' && (
+                                    <ul className='ml-6 mt-2 space-y-2 border-l border-gray-600 pl-4'>
+                                        <li>
+                                            <Link
+                                                href='/data-desa/pendidikan'
+                                                className='block text-gray-400 hover:text-emerald-400 transition-colors duration-300'
+                                            >
+                                                Pendidikan
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                href='/data-desa/jenis-kelamin'
+                                                className='block text-gray-400 hover:text-emerald-400 transition-colors duration-300'
+                                            >
+                                                Jenis Kelamin
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                href='/data-desa/usia'
+                                                className='block text-gray-400 hover:text-emerald-400 transition-colors duration-300'
+                                            >
+                                                Kelompok Usia
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                href='/data-desa/kependudukan'
+                                                className='block text-gray-400 hover:text-emerald-400 transition-colors duration-300'
+                                            >
+                                                Kependudukan
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                )}
+                            </li>
+
+                            {/* Potensi Desa */}
+                            <li className='group'>
+                                <div
+                                    onClick={() => toggleMenu('potensi-desa')}
+                                    className='flex items-center text-gray-300 hover:text-emerald-400 transition-colors duration-300 cursor-pointer select-none'
+                                >
+                                    <span className='w-2 h-2 bg-emerald-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></span>
+                                    <span className='group-hover:translate-x-1 transition-transform duration-300'>
+                                        Potensi Desa
+                                    </span>
+                                    <span className='ml-2 transition-transform duration-300'>
+                                        {openMenu === 'potensi-desa' ? (
+                                            <ChevronDown className='w-4 h-4' />
+                                        ) : (
+                                            <ChevronRight className='w-4 h-4' />
+                                        )}
+                                    </span>
+                                </div>
+                                {openMenu === 'potensi-desa' && (
+                                    <ul className='ml-6 mt-2 space-y-2 border-l border-gray-600 pl-4'>
+                                        <li>
+                                            <Link
+                                                href='/potensi-desa/pertanian'
+                                                className='block text-gray-400 hover:text-emerald-400 transition-colors duration-300'
+                                            >
+                                                Sektor Pertanian
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                href='/potensi-desa/perkebunan'
+                                                className='block text-gray-400 hover:text-emerald-400 transition-colors duration-300'
+                                            >
+                                                Sektor Perkebunan
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                href='/potensi-desa/peternakan'
+                                                className='block text-gray-400 hover:text-emerald-400 transition-colors duration-300'
+                                            >
+                                                Sektor Peternakan
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                )}
+                            </li>
+
+                            {/* Wisata Desa */}
+                            <li className='group'>
+                                <Link
+                                    href='/wisata-desa'
+                                    className='flex items-center text-gray-300 hover:text-emerald-400 transition-colors duration-300'
+                                >
+                                    <span className='w-2 h-2 bg-emerald-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></span>
+                                    <span className='group-hover:translate-x-1 transition-transform duration-300'>
+                                        Wisata Desa
+                                    </span>
+                                </Link>
+                            </li>
+
+                            {/* Hubungi Kami */}
+                            <li className='group'>
+                                <Link
+                                    href='/kontak'
+                                    className='flex items-center text-gray-300 hover:text-emerald-400 transition-colors duration-300'
+                                >
+                                    <span className='w-2 h-2 bg-emerald-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></span>
+                                    <span className='group-hover:translate-x-1 transition-transform duration-300'>
+                                        Hubungi Kami
+                                    </span>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
@@ -201,9 +398,6 @@ const Footer = () => {
                                 <h4 className='font-semibold text-white mb-1'>
                                     KKN UNPER × Desa Cigalontang
                                 </h4>
-                                <p className='text-xs text-gray-400'>
-                                    Kolaborasi membangun desa berbasis teknologi
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -238,9 +432,8 @@ const Footer = () => {
                         Dilindungi.
                     </p>
                     <p className='text-sm text-gray-500 flex flex-wrap items-center justify-center gap-x-2 gap-y-1'>
-                        <span>Dikembangkan dengan</span>
+                        <span>Dikembangkan</span>
                         <span className='flex items-center'>
-                            <Heart className='w-4 h-4 mx-1 text-emerald-400' />
                             oleh Tim KKN UNPER 2025
                         </span>
                     </p>

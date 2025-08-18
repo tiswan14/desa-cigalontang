@@ -9,6 +9,12 @@ import {
     HelpingHand,
 } from 'lucide-react'
 
+export const metadata = {
+    title: 'Ekonomi - Desa Cigalontang',
+    description:
+        'Gambaran umum tingkat kesejahteraan, pekerjaan utama, dan arah pembangunan ekonomi di Desa Cigalontang.',
+}
+
 export default function EkonomiPage() {
     return (
         <div className='min-h-screen bg-gradient-to-b from-emerald-50 to-white py-20'>
