@@ -7,6 +7,17 @@ import {
     UsersRound,
     Hammer,
     HelpingHand,
+    TrendingUp,
+    PieChart,
+    Gift,
+    Home,
+    Target,
+    Star,
+    Award,
+    Heart,
+    ArrowUpRight,
+    Coins,
+    Activity,
 } from 'lucide-react'
 
 export const metadata = {
@@ -16,6 +27,133 @@ export const metadata = {
 }
 
 export default function EkonomiPage() {
+    const kesejahteraanData = [
+        {
+            kategori: 'Prasejahtera',
+            kk: '375',
+            jiwa: '997',
+            icon: <Target className='w-6 h-6' />,
+            color: 'from-red-400 to-red-500',
+            bgColor: 'bg-red-50',
+            textColor: 'text-red-700',
+            borderColor: 'border-red-200',
+        },
+        {
+            kategori: 'Prasejahtera I',
+            kk: '331',
+            jiwa: '1201',
+            icon: <TrendingUp className='w-6 h-6' />,
+            color: 'from-orange-400 to-orange-500',
+            bgColor: 'bg-orange-50',
+            textColor: 'text-orange-700',
+            borderColor: 'border-orange-200',
+        },
+        {
+            kategori: 'Sejahtera II',
+            kk: '282',
+            jiwa: '731',
+            icon: <Award className='w-6 h-6' />,
+            color: 'from-blue-400 to-blue-500',
+            bgColor: 'bg-blue-50',
+            textColor: 'text-blue-700',
+            borderColor: 'border-blue-200',
+        },
+        {
+            kategori: 'Sejahtera III',
+            kk: '135',
+            jiwa: '427',
+            icon: <Star className='w-6 h-6' />,
+            color: 'from-emerald-400 to-emerald-500',
+            bgColor: 'bg-emerald-50',
+            textColor: 'text-emerald-700',
+            borderColor: 'border-emerald-200',
+        },
+    ]
+
+    const pekerjaanData = [
+        {
+            label: 'Buruh Tani',
+            jumlah: '1,532',
+            icon: <Sprout className='w-6 h-6' />,
+            color: 'from-green-400 to-green-500',
+            bgColor: 'bg-green-50',
+            textColor: 'text-green-700',
+            percentage: '78%',
+        },
+        {
+            label: 'Pedagang',
+            jumlah: '145',
+            icon: <ShoppingCart className='w-6 h-6' />,
+            color: 'from-purple-400 to-purple-500',
+            bgColor: 'bg-purple-50',
+            textColor: 'text-purple-700',
+            percentage: '7%',
+        },
+        {
+            label: 'Petani',
+            jumlah: '53',
+            icon: <Sprout className='w-6 h-6' />,
+            color: 'from-lime-400 to-lime-500',
+            bgColor: 'bg-lime-50',
+            textColor: 'text-lime-700',
+            percentage: '3%',
+        },
+        {
+            label: 'Tukang',
+            jumlah: '45',
+            icon: <Hammer className='w-6 h-6' />,
+            color: 'from-amber-400 to-amber-500',
+            bgColor: 'bg-amber-50',
+            textColor: 'text-amber-700',
+            percentage: '2%',
+        },
+        {
+            label: 'PNS / Wiraswasta',
+            jumlah: '30',
+            icon: <Building2 className='w-6 h-6' />,
+            color: 'from-indigo-400 to-indigo-500',
+            bgColor: 'bg-indigo-50',
+            textColor: 'text-indigo-700',
+            percentage: '1.5%',
+        },
+        {
+            label: 'Lainnya',
+            jumlah: '±100',
+            icon: <UsersRound className='w-6 h-6' />,
+            color: 'from-gray-400 to-gray-500',
+            bgColor: 'bg-gray-50',
+            textColor: 'text-gray-700',
+            percentage: '5%',
+        },
+    ]
+
+    const programSosialData = [
+        {
+            program: 'Penyaluran Raskin',
+            icon: <Gift className='w-6 h-6' />,
+            color: 'from-rose-400 to-rose-500',
+            bgColor: 'bg-rose-50',
+            textColor: 'text-rose-700',
+            data: [
+                { wilayah: 'Cigalontang', detail: '65 RTM – 15 kg' },
+                { wilayah: 'Panyandungan', detail: '65 RTM – 15 kg' },
+                { wilayah: 'Cigalontang Girang', detail: '74 RTM – 15 kg' },
+            ],
+        },
+        {
+            program: 'Penerima PKH',
+            icon: <Heart className='w-6 h-6' />,
+            color: 'from-pink-400 to-pink-500',
+            bgColor: 'bg-pink-50',
+            textColor: 'text-pink-700',
+            data: [
+                { wilayah: 'Cigalontang', detail: '21 KK' },
+                { wilayah: 'Panyandungan', detail: '19 KK' },
+                { wilayah: 'Cigalontang Girang', detail: '18 KK' },
+            ],
+        },
+    ]
+
     return (
         <div className='min-h-screen bg-gradient-to-b from-emerald-50 to-white py-20'>
             {/* Header Section */}
@@ -97,177 +235,309 @@ export default function EkonomiPage() {
             </header>
 
             <main className='container mx-auto px-4 py-14'>
+                {/* Stats Overview */}
+                <section className='mb-20'>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-6 -mt-10 relative z-20'>
+                        <div className='bg-white rounded-2xl p-6 shadow-xl border border-gray-100 backdrop-blur-sm'>
+                            <div className='flex items-center justify-between mb-4'>
+                                <div
+                                    className={`p-3 rounded-xl bg-gradient-to-r from-emerald-400 to-emerald-500 text-white`}
+                                >
+                                    <Home className='w-6 h-6' />
+                                </div>
+                                <ArrowUpRight className='w-5 h-5 text-gray-400' />
+                            </div>
+                            <h3 className='text-2xl font-bold text-gray-800 mb-1'>
+                                1,123
+                            </h3>
+                            <p className='text-sm text-gray-600'>
+                                Total Kepala Keluarga
+                            </p>
+                            <div className='mt-2 text-xs text-emerald-600 flex items-center'>
+                                <Activity className='w-3 h-3 mr-1' />
+                                <span>3,356 Total Jiwa</span>
+                            </div>
+                        </div>
+
+                        <div className='bg-white rounded-2xl p-6 shadow-xl border border-gray-100 backdrop-blur-sm'>
+                            <div className='flex items-center justify-between mb-4'>
+                                <div
+                                    className={`p-3 rounded-xl bg-gradient-to-r from-blue-400 to-blue-500 text-white`}
+                                >
+                                    <Coins className='w-6 h-6' />
+                                </div>
+                                <ArrowUpRight className='w-5 h-5 text-gray-400' />
+                            </div>
+                            <h3 className='text-2xl font-bold text-gray-800 mb-1'>
+                                78%
+                            </h3>
+                            <p className='text-sm text-gray-600'>
+                                Sektor Pertanian
+                            </p>
+                            <div className='mt-2 text-xs text-blue-600 flex items-center'>
+                                <Activity className='w-3 h-3 mr-1' />
+                                <span>Pekerjaan Dominan</span>
+                            </div>
+                        </div>
+
+                        <div className='bg-white rounded-2xl p-6 shadow-xl border border-gray-100 backdrop-blur-sm'>
+                            <div className='flex items-center justify-between mb-4'>
+                                <div
+                                    className={`p-3 rounded-xl bg-gradient-to-r from-purple-400 to-purple-500 text-white`}
+                                >
+                                    <Gift className='w-6 h-6' />
+                                </div>
+                                <ArrowUpRight className='w-5 h-5 text-gray-400' />
+                            </div>
+                            <h3 className='text-2xl font-bold text-gray-800 mb-1'>
+                                262
+                            </h3>
+                            <p className='text-sm text-gray-600'>
+                                Penerima Bantuan
+                            </p>
+                            <div className='mt-2 text-xs text-purple-600 flex items-center'>
+                                <Activity className='w-3 h-3 mr-1' />
+                                <span>Program Sosial Aktif</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Kesejahteraan Keluarga */}
-                <section
-                    className='mb-20'
-                    data-aos='fade-up'
-                >
-                    <div className='flex items-center gap-3 mb-6'>
-                        <Users className='text-emerald-600 w-6 h-6' />
-                        <h2 className='text-2xl font-bold text-emerald-800'>
+                <section className='mb-20'>
+                    <div className='text-center mb-12'>
+                        <div className='inline-flex items-center px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-4'>
+                            <Users className='w-4 h-4 mr-2' />
+                            TINGKAT KESEJAHTERAAN
+                        </div>
+                        <h2 className='text-3xl font-bold text-gray-900 mb-4'>
                             Kesejahteraan Keluarga
                         </h2>
+                        <div className='w-20 h-1 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full mx-auto mb-4'></div>
+                        <p className='text-gray-600 max-w-2xl mx-auto'>
+                            Distribusi tingkat kesejahteraan masyarakat
+                            berdasarkan klasifikasi standar nasional
+                        </p>
                     </div>
+
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-                        {[
-                            ['Prasejahtera', '375 KK', '997 Jiwa', 100],
-                            ['Prasejahtera I', '331 KK', '1201 Jiwa', 200],
-                            ['Sejahtera II', '282 KK', '731 Jiwa', 300],
-                            ['Sejahtera III', '135 KK', '427 Jiwa', 400],
-                        ].map(([kategori, kk, jiwa, delay], i) => (
+                        {kesejahteraanData.map((item, i) => (
                             <div
                                 key={i}
-                                className='bg-white rounded-xl p-6 shadow text-emerald-800'
-                                data-aos='fade-up'
-                                data-aos-delay={delay}
+                                className={`group relative bg-white rounded-2xl p-6 shadow-lg border ${item.borderColor} transition-all duration-300 hover:shadow-xl hover:-translate-y-2 overflow-hidden`}
                             >
-                                <h3 className='text-lg font-semibold'>
-                                    {kategori}
+                                {/* Background Pattern */}
+                                <div className='absolute top-0 right-0 w-20 h-20 opacity-5'>
+                                    <div
+                                        className={`w-full h-full rounded-full bg-gradient-to-r ${item.color}`}
+                                    ></div>
+                                </div>
+
+                                {/* Icon */}
+                                <div
+                                    className={`inline-flex items-center justify-center p-3 rounded-xl bg-gradient-to-r ${item.color} text-white mb-4 shadow-lg`}
+                                >
+                                    {item.icon}
+                                </div>
+
+                                {/* Content */}
+                                <h3 className='text-lg font-bold text-gray-900 mb-2'>
+                                    {item.kategori}
                                 </h3>
-                                <p className='text-2xl font-bold mt-2'>{kk}</p>
-                                <p className='text-sm text-gray-500'>{jiwa}</p>
+                                <div className='space-y-1'>
+                                    <div className='flex items-center justify-between'>
+                                        <span className='text-2xl font-bold text-gray-800'>
+                                            {item.kk}
+                                        </span>
+                                        <span className='text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full'>
+                                            KK
+                                        </span>
+                                    </div>
+                                    <div className='flex items-center justify-between'>
+                                        <span className='text-lg font-semibold text-gray-600'>
+                                            {item.jiwa}
+                                        </span>
+                                        <span className='text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full'>
+                                            Jiwa
+                                        </span>
+                                    </div>
+                                </div>
+
+                                {/* Hover Effect */}
+                                <div
+                                    className={`absolute inset-0 bg-gradient-to-r ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
+                                ></div>
                             </div>
                         ))}
                     </div>
                 </section>
 
                 {/* Pekerjaan Penduduk */}
-                <section
-                    className='mb-20'
-                    data-aos='fade-up'
-                >
-                    <div className='flex items-center gap-3 mb-6'>
-                        <BarChart3 className='text-emerald-600 w-6 h-6' />
-                        <h2 className='text-2xl font-bold text-emerald-800'>
+                <section className='mb-20'>
+                    <div className='text-center mb-12'>
+                        <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-4'>
+                            <BarChart3 className='w-4 h-4 mr-2' />
+                            MATA PENCAHARIAN
+                        </div>
+                        <h2 className='text-3xl font-bold text-gray-900 mb-4'>
                             Pekerjaan Penduduk
                         </h2>
+                        <div className='w-20 h-1 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full mx-auto mb-4'></div>
+                        <p className='text-gray-600 max-w-2xl mx-auto'>
+                            Komposisi pekerjaan masyarakat yang menggambarkan
+                            struktur ekonomi desa
+                        </p>
                     </div>
+
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-                        {[
-                            [
-                                'Buruh Tani',
-                                '1,532',
-                                <Sprout className='text-emerald-600 w-5 h-5 mr-2' />,
-                                100,
-                            ],
-                            [
-                                'Petani',
-                                '53',
-                                <Sprout className='text-emerald-600 w-5 h-5 mr-2' />,
-                                150,
-                            ],
-                            [
-                                'Pedagang',
-                                '145',
-                                <ShoppingCart className='text-emerald-600 w-5 h-5 mr-2' />,
-                                200,
-                            ],
-                            [
-                                'PNS / Wiraswasta',
-                                '30',
-                                <Building2 className='text-emerald-600 w-5 h-5 mr-2' />,
-                                250,
-                            ],
-                            [
-                                'Tukang',
-                                '45',
-                                <Hammer className='text-emerald-600 w-5 h-5 mr-2' />,
-                                300,
-                            ],
-                            [
-                                'Lainnya',
-                                '±100',
-                                <UsersRound className='text-emerald-600 w-5 h-5 mr-2' />,
-                                350,
-                            ],
-                        ].map(([label, jumlah, icon, delay], i) => (
+                        {pekerjaanData.map((item, i) => (
                             <div
                                 key={i}
-                                className='bg-white rounded-xl p-6 shadow text-emerald-800'
-                                data-aos='fade-up'
-                                data-aos-delay={delay}
+                                className='group relative bg-white rounded-2xl p-6 shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden'
                             >
-                                <div className='flex items-center'>
-                                    {icon}
-                                    <span className='text-sm font-medium text-gray-800'>
-                                        {label}
+                                {/* Background Gradient */}
+                                <div
+                                    className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-r ${item.color} opacity-5 rounded-full -mr-12 -mt-12 transition-all duration-300 group-hover:scale-110`}
+                                ></div>
+
+                                {/* Header */}
+                                <div className='flex items-center justify-between mb-4'>
+                                    <div
+                                        className={`p-3 rounded-xl bg-gradient-to-r ${item.color} text-white shadow-lg`}
+                                    >
+                                        {item.icon}
+                                    </div>
+                                    <span
+                                        className={`text-xs font-bold px-2 py-1 rounded-full ${item.bgColor} ${item.textColor}`}
+                                    >
+                                        {item.percentage}
                                     </span>
                                 </div>
-                                <p className='text-3xl font-bold mt-2'>
-                                    {jumlah}
-                                </p>
+
+                                {/* Content */}
+                                <h4 className='text-lg font-bold text-gray-900 mb-2'>
+                                    {item.label}
+                                </h4>
+                                <div className='flex items-baseline gap-2'>
+                                    <span className='text-3xl font-bold text-gray-800'>
+                                        {item.jumlah}
+                                    </span>
+                                    <span className='text-sm text-gray-500'>
+                                        orang
+                                    </span>
+                                </div>
+
+                                {/* Progress Bar */}
+                                <div className='mt-4 w-full bg-gray-200 rounded-full h-2'>
+                                    <div
+                                        className={`h-2 bg-gradient-to-r ${item.color} rounded-full transition-all duration-1000 group-hover:animate-pulse`}
+                                        style={{ width: item.percentage }}
+                                    ></div>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </section>
 
                 {/* Program Sosial */}
-                <section
-                    className='mb-20'
-                    data-aos='fade-up'
-                >
-                    <div className='flex items-center gap-3 mb-6'>
-                        <HelpingHand className='text-emerald-600 w-6 h-6' />
-                        <h2 className='text-2xl font-bold text-emerald-800'>
+                <section className='mb-20'>
+                    <div className='text-center mb-12'>
+                        <div className='inline-flex items-center px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-4'>
+                            <HelpingHand className='w-4 h-4 mr-2' />
+                            BANTUAN SOSIAL
+                        </div>
+                        <h2 className='text-3xl font-bold text-gray-900 mb-4'>
                             Program Sosial
                         </h2>
+                        <div className='w-20 h-1 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full mx-auto mb-4'></div>
+                        <p className='text-gray-600 max-w-2xl mx-auto'>
+                            Program bantuan pemerintah untuk meningkatkan
+                            kesejahteraan masyarakat
+                        </p>
                     </div>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-                        {/* Raskin */}
-                        <div
-                            className='bg-white rounded-xl p-6 shadow text-emerald-800'
-                            data-aos='fade-up'
-                            data-aos-delay='100'
-                        >
-                            <h3 className='text-lg font-semibold mb-4'>
-                                Penyaluran Raskin
-                            </h3>
-                            <ul className='space-y-3 text-sm'>
-                                <li className='flex justify-between'>
-                                    <span>Cigalontang</span>
-                                    <span className='font-medium'>
-                                        65 RTM – 15 kg
-                                    </span>
-                                </li>
-                                <li className='flex justify-between'>
-                                    <span>Panyandungan</span>
-                                    <span className='font-medium'>
-                                        65 RTM – 15 kg
-                                    </span>
-                                </li>
-                                <li className='flex justify-between'>
-                                    <span>Cigalontang Girang</span>
-                                    <span className='font-medium'>
-                                        74 RTM – 15 kg
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
 
-                        {/* PKH */}
-                        <div
-                            className='bg-white rounded-xl p-6 shadow text-emerald-800'
-                            data-aos='fade-up'
-                            data-aos-delay='150'
-                        >
-                            <h3 className='text-lg font-semibold mb-4'>
-                                Penerima PKH
-                            </h3>
-                            <ul className='space-y-3 text-sm'>
-                                <li className='flex justify-between'>
-                                    <span>Cigalontang</span>
-                                    <span className='font-medium'>21 KK</span>
-                                </li>
-                                <li className='flex justify-between'>
-                                    <span>Panyandungan</span>
-                                    <span className='font-medium'>19 KK</span>
-                                </li>
-                                <li className='flex justify-between'>
-                                    <span>Cigalontang Girang</span>
-                                    <span className='font-medium'>18 KK</span>
-                                </li>
-                            </ul>
-                        </div>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+                        {programSosialData.map((program, i) => (
+                            <div
+                                key={i}
+                                className='group bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-xl'
+                            >
+                                {/* Header Card */}
+                                <div
+                                    className={`p-6 bg-gradient-to-r from-emerald-500 to-teal-600 text-white relative overflow-hidden`}
+                                >
+                                    <div className='absolute top-0 right-0 w-20 h-20 bg-white opacity-10 rounded-full -mr-10 -mt-10'></div>
+                                    <div className='relative z-10'>
+                                        <div className='flex items-center gap-3 mb-2'>
+                                            <div className='p-2 bg-white/20 rounded-lg backdrop-blur-sm'>
+                                                {program.icon}
+                                            </div>
+                                            <h3 className='text-xl font-bold'>
+                                                {program.program}
+                                            </h3>
+                                        </div>
+                                        <p className='text-sm opacity-90'>
+                                            Distribusi bantuan per wilayah
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Content */}
+                                <div className='p-6'>
+                                    <div className='space-y-4'>
+                                        {program.data.map((item, idx) => (
+                                            <div
+                                                key={idx}
+                                                className='flex items-center justify-between p-4 rounded-xl bg-gray-50 border border-gray-100 transition-all duration-200 hover:bg-gray-100 hover:shadow-md'
+                                            >
+                                                <div className='flex items-center gap-3'>
+                                                    <div
+                                                        className={`w-3 h-3 rounded-full bg-gradient-to-r from-emerald-400 to-teal-500`}
+                                                    ></div>
+                                                    <span className='font-medium text-gray-800'>
+                                                        {item.wilayah}
+                                                    </span>
+                                                </div>
+                                                <div className='flex items-center gap-2'>
+                                                    <span className='font-bold text-gray-900'>
+                                                        {item.detail}
+                                                    </span>
+                                                    <div
+                                                        className={`p-1 rounded-full bg-emerald-100`}
+                                                    >
+                                                        <ArrowUpRight
+                                                            className={`w-3 h-3 text-emerald-600`}
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* Summary */}
+                                    <div
+                                        className={`mt-6 p-4 rounded-xl bg-emerald-50 border border-emerald-100`}
+                                    >
+                                        <div className='flex items-center justify-between'>
+                                            <span
+                                                className={`text-sm font-medium text-emerald-700`}
+                                            >
+                                                Total Penerima
+                                            </span>
+                                            <span
+                                                className={`text-lg font-bold text-emerald-700`}
+                                            >
+                                                {program.program.includes(
+                                                    'Raskin'
+                                                )
+                                                    ? '204 RTM'
+                                                    : '58 KK'}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </section>
             </main>

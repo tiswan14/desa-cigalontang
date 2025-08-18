@@ -1,139 +1,155 @@
-import { Users, FileText, ArrowRight } from 'lucide-react'
+'use client'
+
+import { Users, User, ArrowRight } from 'lucide-react'
 
 const StrukturPemerintahan = () => {
     const perangkatDesa = [
         {
-            nama: 'Deni Nugraha, S.IP',
+            nama: 'DENI NUGRAHA, S.IP',
             jabatan: 'Kepala Desa',
-            sk: '',
-            foto: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
+            foto: '/kepala-desa.jpg',
         },
         {
             nama: 'Momo',
             jabatan: 'Sekretaris Desa',
-            sk: 'SK No. 141.1/01/2016',
-            foto: 'https://images.unsplash.com/photo-1494790108755-2616c35cbc87?w=150&h=150&fit=crop&crop=face',
+            foto: '/momo.png',
         },
         {
-            nama: 'Dedin',
-            jabatan: 'Kaur Umum/Tata Usaha',
-            sk: 'SK No. 141.1/01/2017',
-            foto: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+            nama: 'Dedin S.Kom',
+            jabatan: 'Kasi Tata Usaha',
+            foto: '/dedin.png',
         },
         {
-            nama: 'Yuda Brahmantiar',
+            nama: 'Yuda Brahmantiar S.Ip',
             jabatan: 'Kaur Perencanaan',
-            sk: 'SK No. 141.1/02/2017',
-            foto: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face',
-        },
-        {
-            nama: 'Dadang Sutisna',
-            jabatan: 'Kaur Keuangan',
-            sk: 'SK No. 141.1/01/2016',
-            foto: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face',
+            foto: '/yuda.png',
         },
     ]
 
+    // Pisahkan Kepala Desa dan perangkat lainnya
+    const kepalaDesa = perangkatDesa.find((p) => p.jabatan === 'Kepala Desa')
+    const perangkatLain = perangkatDesa.filter(
+        (p) => p.jabatan !== 'Kepala Desa'
+    )
+
     return (
-        <section className='max-w-6xl mx-auto px-4 py-16'>
-            {/* Section Header */}
-            <div className='text-center mb-12'>
-                <div className='flex items-center justify-center mb-3'>
-                    <Users className='h-6 w-6 text-emerald-600 mr-2' />
-                    <h2 className='text-2xl md:text-4xl font-bold text-emerald-700'>
-                        Pemerintahan Desa
+        <section className='py-20 bg-gradient-to-br from-gray-50 to-white'>
+            <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+                {/* Section Header */}
+                <div className='text-center mb-16'>
+                    <span className='inline-flex items-center px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 text-sm font-medium mb-6'>
+                        <Users className='h-4 w-4 mr-2' />
+                        PEMERINTAHAN DESA
+                    </span>
+                    <h2 className='text-4xl font-bold text-gray-900 mb-4'>
+                        Struktur Pemerintahan
                     </h2>
+                    <div className='mx-auto w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full mb-6'></div>
+                    <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
+                        Kepala desa dan perangkat desa yang bekerja bersama
+                        dalam pelayanan publik dan pembangunan masyarakat.
+                    </p>
                 </div>
-                <div className='w-20 h-1 bg-emerald-400 mx-auto mb-4'></div>
-                <p className='text-gray-600 max-w-2xl mx-auto'>
-                    Struktur pemerintahan Desa Cigalontang terdiri dari kepala
-                    desa dan perangkat desa yang bekerja bersama dalam pelayanan
-                    publik dan pembangunan masyarakat.
-                </p>
-            </div>
 
-            {/* Kepala Desa - Featured Card */}
-            <div className='flex justify-center mb-12'>
-                <div className='bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl border-2 border-emerald-200 shadow-lg p-8 max-w-sm w-full'>
-                    <div className='flex flex-col items-center text-center space-y-4'>
-                        {/* Profile Photo */}
-                        <div className='relative'>
-                            <div className='w-24 h-24 rounded-full overflow-hidden border-4 border-emerald-300 shadow-md'>
-                                <img
-                                    src={perangkatDesa[0].foto}
-                                    alt={perangkatDesa[0].nama}
-                                    className='w-full h-full object-cover'
-                                />
+                {/* === KEPALA DESA - Tampilan Khusus === */}
+                {kepalaDesa && (
+                    <div className='max-w-2xl mx-auto mb-16'>
+                        <div className='group relative bg-white rounded-2xl shadow-2xl overflow-hidden border-2 border-emerald-200 transition-all duration-300 hover:shadow-3xl hover:-translate-y-2'>
+                            {/* Badge Kepala Desa */}
+                            <div className='absolute top-4 left-4 z-10'>
+                                <span className='inline-flex items-center px-3 py-1 rounded-full bg-emerald-600 text-white text-sm font-semibold'>
+                                    <User className='h-4 w-4 mr-1' />
+                                    KEPALA DESA
+                                </span>
                             </div>
-                            {/* Crown indicator */}
-                            <div className='absolute -top-2 -right-2 w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center shadow-lg'>
-                                <Users className='h-4 w-4 text-white' />
-                            </div>
-                        </div>
 
-                        {/* Information */}
-                        <div className='space-y-2'>
-                            <h3 className='text-xl font-bold text-emerald-800'>
-                                {perangkatDesa[0].nama}
-                            </h3>
-                            <p className='text-emerald-700 font-semibold text-lg'>
-                                {perangkatDesa[0].jabatan}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Other Government Officials */}
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10'>
-                {perangkatDesa.slice(1, 6).map((pejabat, index) => (
-                    <div
-                        key={index + 1}
-                        className='bg-white rounded-xl border border-gray-100 shadow-sm p-6 hover:shadow-lg hover:border-emerald-100 transition-all duration-300 group'
-                    >
-                        <div className='flex flex-col items-center text-center space-y-4'>
-                            {/* Profile Photo */}
-                            <div className='relative'>
-                                <div className='w-16 h-16 rounded-full overflow-hidden border-3 border-emerald-100 group-hover:border-emerald-200 transition-colors duration-300'>
+                            {/* Photo */}
+                            <div className='relative h-80 sm:h-72 overflow-hidden bg-gradient-to-br from-emerald-100 to-teal-100'>
+                                {kepalaDesa.foto ? (
                                     <img
-                                        src={pejabat.foto}
-                                        alt={pejabat.nama}
-                                        className='w-full h-full object-cover'
+                                        src={kepalaDesa.foto}
+                                        alt={`Foto ${kepalaDesa.nama}`}
+                                        className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
+                                        onError={(e) => {
+                                            e.target.onerror = null
+                                            e.target.src = ''
+                                        }}
                                     />
-                                </div>
-                            </div>
-
-                            {/* Information */}
-                            <div className='space-y-2'>
-                                <h3 className='text-base font-semibold text-emerald-800'>
-                                    {pejabat.nama}
-                                </h3>
-                                <p className='text-gray-700 font-medium text-sm'>
-                                    {pejabat.jabatan}
-                                </p>
-                                {pejabat.sk && (
-                                    <div className='flex items-center justify-center space-x-1'>
-                                        <FileText className='h-3 w-3 text-gray-400' />
-                                        <p className='text-xs text-gray-400'>
-                                            {pejabat.sk}
-                                        </p>
+                                ) : (
+                                    <div className='w-full h-full flex items-center justify-center'>
+                                        <User className='h-24 w-24 text-emerald-600' />
                                     </div>
                                 )}
+                                {/* Gradient overlay */}
+                                <div className='absolute inset-0 bg-gradient-to-t from-black/20 to-transparent'></div>
+                            </div>
+
+                            {/* Info */}
+                            <div className='p-8 text-center bg-gradient-to-r from-emerald-50 to-teal-50'>
+                                <h3 className='text-3xl font-bold text-gray-800 mb-2'>
+                                    {kepalaDesa.nama}
+                                </h3>
+
+                                <div className='w-16 h-1 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full mx-auto mb-4'></div>
                             </div>
                         </div>
                     </div>
-                ))}
-            </div>
+                )}
 
-            {/* CTA Button */}
-            <div className='text-center'>
-                <a
-                    href='/profil-desa/struktur-organisasi'
-                    className='inline-flex items-center px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg shadow-sm transition-colors duration-300'
-                >
-                    Lihat Struktur Lengkap
-                    <ArrowRight className='h-4 w-4 ml-2' />
-                </a>
+                {/* === PERANGKAT DESA LAINNYA === */}
+                <div className='mb-8'>
+                    <h3 className='text-2xl font-bold text-gray-800 text-center mb-8'>
+                        Perangkat Desa
+                    </h3>
+                    <div className='grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
+                        {perangkatLain.map((pejabat, idx) => (
+                            <div
+                                key={idx}
+                                className='group relative bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1'
+                            >
+                                {/* Photo */}
+                                <div className='relative h-64 overflow-hidden bg-gray-100'>
+                                    {pejabat.foto ? (
+                                        <img
+                                            src={pejabat.foto}
+                                            alt={`Foto ${pejabat.nama}`}
+                                            className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
+                                            onError={(e) => {
+                                                e.target.onerror = null
+                                                e.target.src = ''
+                                            }}
+                                        />
+                                    ) : (
+                                        <div className='w-full h-full flex items-center justify-center bg-emerald-100'>
+                                            <Users className='h-16 w-16 text-emerald-600' />
+                                        </div>
+                                    )}
+                                </div>
+
+                                {/* Info */}
+                                <div className='p-6'>
+                                    <h4 className='text-xl font-bold text-gray-800 mb-1'>
+                                        {pejabat.nama}
+                                    </h4>
+                                    <p className='text-emerald-600 font-medium mb-3'>
+                                        {pejabat.jabatan}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* CTA */}
+                <div className='text-center'>
+                    <a
+                        href='/profil-desa/struktur-organisasi'
+                        className='inline-flex items-center px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg group'
+                    >
+                        Lihat Struktur Lengkap
+                        <ArrowRight className='h-5 w-5 ml-2 transition-transform group-hover:translate-x-1' />
+                    </a>
+                </div>
             </div>
         </section>
     )

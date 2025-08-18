@@ -215,14 +215,6 @@ const StrukturOrganisasiClient = () => {
                                                     {pejabat.jabatan}
                                                 </p>
                                             </div>
-
-                                            {pejabat.sk && (
-                                                <div className='pt-3 border-t border-gray-100'>
-                                                    <p className='text-sm text-gray-500'>
-                                                        {pejabat.sk}
-                                                    </p>
-                                                </div>
-                                            )}
                                         </div>
                                     </div>
                                 ))}

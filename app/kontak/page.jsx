@@ -85,7 +85,7 @@ export default function ContactPage() {
             </div>
 
             {/* Main Content */}
-            <div className='container mx-auto px-4 py-16 -mt-16 relative z-10'>
+            <div className='container mx-auto px-4 py-24 -mt-16 relative z-10'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
                     {/* Contact Information */}
                     <div className='bg-white rounded-xl shadow-lg p-8 border border-emerald-100'>

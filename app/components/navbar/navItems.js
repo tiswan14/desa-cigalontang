@@ -81,7 +81,7 @@ const navItems = [
 
     {
         href: '/wisata-desa',
-        text: 'Wisata Desa',
+        text: 'Wisata & UMKM',
     },
 
     {
