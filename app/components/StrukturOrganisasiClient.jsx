@@ -20,7 +20,7 @@ const StrukturOrganisasiClient = () => {
             kategori: 'Perangkat Desa',
             data: [
                 {
-                    nama: 'Momo',
+                    nama: 'Momo S.Ip',
                     jabatan: 'Sekretaris Desa',
                     sk: 'SK: 141.1/01/2016',
                     foto: '/momo.png',

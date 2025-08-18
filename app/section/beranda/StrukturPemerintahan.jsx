@@ -10,7 +10,7 @@ const StrukturPemerintahan = () => {
             foto: '/kepala-desa.jpg',
         },
         {
-            nama: 'Momo',
+            nama: 'Momo S.Ip',
             jabatan: 'Sekretaris Desa',
             foto: '/momo.png',
         },
