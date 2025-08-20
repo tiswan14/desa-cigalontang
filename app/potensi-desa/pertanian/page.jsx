@@ -378,66 +378,7 @@ export default function SektorPertanian() {
                 </div>
 
                 {/* Kelompok Tani & Fasilitas */}
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
-                    {/* Kelompok Tani */}
-                    <div>
-                        <div className='mb-8'>
-                            <div className='inline-flex items-center space-x-2 text-emerald-600 mb-4'>
-                                <Users className='w-5 h-5' />
-                                <span className='text-sm font-semibold uppercase tracking-wide'>
-                                    Kelompok Tani
-                                </span>
-                            </div>
-                            <h3 className='text-2xl font-bold text-gray-800 mb-2'>
-                                Organisasi Petani
-                            </h3>
-                            <div className='w-16 h-1 bg-gradient-to-r from-emerald-400 to-teal-400'></div>
-                        </div>
-
-                        <div className='space-y-6'>
-                            {kelompokTaniData.map((kelompok, index) => (
-                                <div
-                                    key={index}
-                                    className={`${getBgColorClasses(
-                                        kelompok.color
-                                    )} rounded-2xl p-6 border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
-                                >
-                                    <div className='flex items-start justify-between mb-4'>
-                                        <div>
-                                            <h4 className='text-xl font-bold text-gray-800 mb-2'>
-                                                {kelompok.name}
-                                            </h4>
-                                            <div className='flex items-center space-x-4 text-sm text-gray-600'>
-                                                <div className='flex items-center'>
-                                                    <Users className='w-4 h-4 mr-1' />
-                                                    <span>
-                                                        {kelompok.anggota}{' '}
-                                                        anggota
-                                                    </span>
-                                                </div>
-                                                <div className='flex items-center'>
-                                                    <MapPin className='w-4 h-4 mr-1' />
-                                                    <span>
-                                                        {kelompok.wilayah}
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='text-right'>
-                                            <div className='bg-emerald-500 text-white px-3 py-1 rounded-full text-xs font-semibold'>
-                                                {kelompok.status}
-                                            </div>
-                                            <div className='text-xs text-gray-500 mt-1 flex items-center'>
-                                                <Calendar className='w-3 h-3 mr-1' />
-                                                {kelompok.tahunBerdiri}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
+                <div className='grid grid-cols-1 lg:grid-cols-1 gap-12'>
                     {/* Fasilitas */}
                     <div>
                         <div className='mb-8'>
@@ -498,7 +439,7 @@ export default function SektorPertanian() {
                 </div>
 
                 {/* Call to Action */}
-                <div className='text-center mt-16 py-12 bg-gradient-to-r from-emerald-500 to-green-500 rounded-3xl text-white'>
+                {/* <div className='text-center mt-16 py-12 bg-gradient-to-r from-emerald-500 to-green-500 rounded-3xl text-white'>
                     <div className='flex items-center justify-center mb-6'>
                         <TrendingUp className='w-12 h-12 text-emerald-200 mr-4' />
                         <h3 className='text-3xl font-bold'>
@@ -515,7 +456,7 @@ export default function SektorPertanian() {
                         <div className='w-3 h-3 bg-white rounded-full'></div>
                         <div className='w-12 h-px bg-emerald-300'></div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

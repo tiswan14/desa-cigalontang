@@ -60,7 +60,83 @@ const DataKelompokUsia = () => {
             jumlah: 404,
             kategori: 'produktif',
         },
-        // ... (rest of your dataUsia array)
+        {
+            kelompok: '25 – 29 tahun',
+            lakiLaki: 227,
+            perempuan: 236,
+            jumlah: 463,
+            kategori: 'produktif',
+        },
+        {
+            kelompok: '30 – 34 tahun',
+            lakiLaki: 152,
+            perempuan: 164,
+            jumlah: 316,
+            kategori: 'produktif',
+        },
+        {
+            kelompok: '35 – 39 tahun',
+            lakiLaki: 164,
+            perempuan: 164,
+            jumlah: 328,
+            kategori: 'produktif',
+        },
+        {
+            kelompok: '40 – 44 tahun',
+            lakiLaki: 129,
+            perempuan: 122,
+            jumlah: 251,
+            kategori: 'produktif',
+        },
+        {
+            kelompok: '45 – 49 tahun',
+            lakiLaki: 102,
+            perempuan: 102,
+            jumlah: 204,
+            kategori: 'produktif',
+        },
+        {
+            kelompok: '50 – 54 tahun',
+            lakiLaki: 102,
+            perempuan: 97,
+            jumlah: 199,
+            kategori: 'produktif',
+        },
+        {
+            kelompok: '55 – 59 tahun',
+            lakiLaki: 82,
+            perempuan: 89,
+            jumlah: 171,
+            kategori: 'produktif',
+        },
+        {
+            kelompok: '60 – 64 tahun',
+            lakiLaki: 26,
+            perempuan: 37,
+            jumlah: 63,
+            kategori: 'lansia',
+        },
+        {
+            kelompok: '65 – 69 tahun',
+            lakiLaki: 17,
+            perempuan: 79,
+            jumlah: 96,
+            kategori: 'lansia',
+        },
+        {
+            kelompok: '70 – 74 tahun',
+            lakiLaki: 13,
+            perempuan: 13,
+            jumlah: 26,
+            kategori: 'lansia',
+        },
+        {
+            kelompok: '75+ tahun',
+            lakiLaki: 13,
+            perempuan: 8,
+            jumlah: 21,
+            kategori: 'lansia',
+        },
     ]
 
     const [filter, setFilter] = useState('all')
@@ -415,7 +491,7 @@ const DataKelompokUsia = () => {
                     </div>
 
                     {/* Analysis Section */}
-                    <div className='grid md:grid-cols-2 gap-8'>
+                    <div className='grid md:grid-cols-1 gap-8'>
                         <div className='bg-white rounded-2xl shadow-lg p-8 border-l-4 border-emerald-500'>
                             <div className='flex items-center mb-6'>
                                 <div className='w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mr-4'>
@@ -464,46 +540,6 @@ const DataKelompokUsia = () => {
                                         %
                                     </span>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div className='bg-white rounded-2xl shadow-lg p-8 border-l-4 border-emerald-500'>
-                            <div className='flex items-center mb-6'>
-                                <div className='w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mr-4'>
-                                    <UserRoundSearch className='h-6 w-6 text-emerald-600' />
-                                </div>
-                                <h2 className='text-2xl md:text-3xl font-semibold text-gray-800'>
-                                    Catatan Demografi
-                                </h2>
-                            </div>
-
-                            <div className='prose prose-emerald text-sm'>
-                                <p className='text-gray-700 leading-relaxed mb-3'>
-                                    <strong>Bonus Demografi:</strong> Dengan{' '}
-                                    {getStatsByCategory('produktif')} jiwa (
-                                    {(
-                                        (getStatsByCategory('produktif') /
-                                            totalPenduduk) *
-                                        100
-                                    ).toFixed(1)}
-                                    %) berada di usia produktif, desa memiliki
-                                    potensi sumber daya manusia yang besar.
-                                </p>
-                                <p className='text-gray-700 leading-relaxed mb-3'>
-                                    <strong>Struktur Usia:</strong> Piramida
-                                    penduduk menunjukkan distribusi yang relatif
-                                    stabil dengan dominasi usia produktif yang
-                                    menguntungkan untuk pembangunan ekonomi.
-                                </p>
-                                <p className='text-gray-700 leading-relaxed'>
-                                    <strong>Tantangan:</strong> Perlu perhatian
-                                    khusus untuk program kesehatan lansia (
-                                    {getStatsByCategory('lansia')} jiwa) dan
-                                    pendidikan anak-anak (
-                                    {getStatsByCategory('balita') +
-                                        getStatsByCategory('anak')}{' '}
-                                    jiwa).
-                                </p>
                             </div>
                         </div>
                     </div>

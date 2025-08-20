@@ -163,23 +163,6 @@ const ProfilSingkatDesa = () => {
                         </span>
                     </p>
                 </div>
-
-                {/* Potensi Desa */}
-                <div
-                    className='bg-white rounded-xl shadow-sm p-6 border border-emerald-100 hover:shadow-md transition-all'
-                    data-aos='fade-up'
-                    data-aos-delay='350'
-                >
-                    <div className='flex items-center mb-4'>
-                        <MapPin className='h-5 w-5 text-emerald-600 mr-2' />
-                        <h3 className='text-lg font-medium text-emerald-800'>
-                            Potensi Desa
-                        </h3>
-                    </div>
-                    <p className='text-gray-600'>
-                        Pertanian, peternakan, dan kerajinan tangan
-                    </p>
-                </div>
             </div>
 
             <div

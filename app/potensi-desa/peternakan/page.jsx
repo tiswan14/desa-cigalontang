@@ -17,7 +17,7 @@ import {
     Home,
     TrendingUp,
     Bird,
-    Rabbit
+    Rabbit,
 } from 'lucide-react'
 
 export default function SektorPeternakan() {
@@ -86,7 +86,6 @@ export default function SektorPeternakan() {
             value: 'Rp 19.500.000',
             icon: Beef,
         },
-        { name: 'Susu & Madu', amount: '-', value: '-', icon: Milk },
     ]
 
     const statsData = [
@@ -395,7 +394,7 @@ export default function SektorPeternakan() {
                         <div className='w-24 h-1 bg-gradient-to-r from-emerald-400 to-green-400 mx-auto'></div>
                     </div>
 
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                         {productionData.map((item, index) => {
                             const IconComponent = item.icon
                             return (
@@ -422,60 +421,6 @@ export default function SektorPeternakan() {
                                 </div>
                             )
                         })}
-                    </div>
-                </div>
-
-                {/* Potensi dan Tantangan */}
-                <div className='mb-16'>
-                    <div className='bg-white rounded-3xl shadow-xl overflow-hidden'>
-                        <div className='bg-gradient-to-r from-emerald-600 to-emerald-500 px-8 py-6'>
-                            <h2 className='text-2xl font-bold text-white flex items-center'>
-                                <TrendingUp className='w-6 h-6 mr-3' />
-                                Potensi dan Tantangan
-                            </h2>
-                        </div>
-                        <div className='p-8'>
-                            <div className='prose prose-emerald max-w-none'>
-                                <p className='text-lg text-gray-700 mb-4'>
-                                    Peternakan rakyat yang berbasis lahan
-                                    pekarangan dan pakan lokal menjadi ciri khas
-                                    peternakan di Desa Cigalontang. Dengan
-                                    populasi ternak yang terus meningkat, sektor
-                                    ini menjadi sumber penghidupan alternatif
-                                    yang penting bagi masyarakat.
-                                </p>
-                                <p className='text-lg text-gray-700'>
-                                    Tantangan utama meliputi keterbatasan pakan
-                                    berkualitas, kandang modern, dan akses ke
-                                    layanan kesehatan hewan. Dengan pembinaan
-                                    berkelanjutan dan penguatan kelembagaan
-                                    peternak, sektor ini berpotensi menjadi
-                                    penggerak ekonomi yang lebih kuat di masa
-                                    depan.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Call to Action */}
-                <div className='text-center mt-16 py-12 bg-gradient-to-r from-emerald-500 to-green-500 rounded-3xl text-white'>
-                    <div className='flex items-center justify-center mb-6'>
-                        <Rabbit className='w-12 h-12 text-emerald-200 mr-4' />
-                        <h3 className='text-3xl font-bold'>
-                            Peternakan Berkelanjutan
-                        </h3>
-                    </div>
-                    <p className='text-emerald-100 max-w-3xl mx-auto mb-6 text-lg'>
-                        Dengan pengelolaan yang baik dan dukungan teknologi,
-                        sektor peternakan Desa Cigalontang siap berkontribusi
-                        lebih besar terhadap ketahanan pangan dan kesejahteraan
-                        masyarakat.
-                    </p>
-                    <div className='flex items-center justify-center space-x-2'>
-                        <div className='w-12 h-px bg-emerald-300'></div>
-                        <div className='w-3 h-3 bg-white rounded-full'></div>
-                        <div className='w-12 h-px bg-emerald-300'></div>
                     </div>
                 </div>
             </div>
