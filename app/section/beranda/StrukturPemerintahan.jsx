@@ -7,7 +7,7 @@ const StrukturPemerintahan = () => {
         {
             nama: 'DENI NUGRAHA, S.IP',
             jabatan: 'Kepala Desa',
-            foto: '/kepala-desa.jpg',
+            foto: '/kades.png',
         },
         {
             nama: 'Momo S.Ip',
@@ -53,7 +53,7 @@ const StrukturPemerintahan = () => {
 
                 {/* === KEPALA DESA - Tampilan Khusus === */}
                 {kepalaDesa && (
-                    <div className='max-w-2xl mx-auto mb-16'>
+                    <div className='max-w-md mx-auto mb-16'>
                         <div className='group relative bg-white rounded-2xl shadow-2xl overflow-hidden border-2 border-emerald-200 transition-all duration-300 hover:shadow-3xl hover:-translate-y-2'>
                             {/* Badge Kepala Desa */}
                             <div className='absolute top-4 left-4 z-10'>
@@ -63,13 +63,13 @@ const StrukturPemerintahan = () => {
                                 </span>
                             </div>
 
-                            {/* Photo */}
-                            <div className='relative h-80 sm:h-72 overflow-hidden bg-gradient-to-br from-emerald-100 to-teal-100'>
+                            {/* Photo - Portrait Orientation */}
+                            <div className='relative h-96 w-full overflow-hidden bg-gradient-to-br from-emerald-100 to-teal-100'>
                                 {kepalaDesa.foto ? (
                                     <img
                                         src={kepalaDesa.foto}
                                         alt={`Foto ${kepalaDesa.nama}`}
-                                        className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
+                                        className='w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105'
                                         onError={(e) => {
                                             e.target.onerror = null
                                             e.target.src = ''
@@ -85,11 +85,10 @@ const StrukturPemerintahan = () => {
                             </div>
 
                             {/* Info */}
-                            <div className='p-8 text-center bg-gradient-to-r from-emerald-50 to-teal-50'>
-                                <h3 className='text-3xl font-bold text-gray-800 mb-2'>
+                            <div className='p-6 text-center bg-gradient-to-r from-emerald-50 to-teal-50'>
+                                <h3 className='text-2xl font-bold text-gray-800 mb-2'>
                                     {kepalaDesa.nama}
                                 </h3>
-
                                 <div className='w-16 h-1 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full mx-auto mb-4'></div>
                             </div>
                         </div>

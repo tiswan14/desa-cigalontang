@@ -12,7 +12,7 @@ const StrukturOrganisasiClient = () => {
                     nama: 'DENI NUGRAHA, S.IP',
                     jabatan: 'Kepala Desa',
                     sk: '',
-                    foto: '/img/kepala-desa.jpg',
+                    foto: '/kades.png',
                 },
             ],
         },
@@ -70,7 +70,7 @@ const StrukturOrganisasiClient = () => {
                     nama: 'Oya',
                     jabatan: 'Kadus I',
                     sk: 'SK: 141.1/02/2017',
-                    foto: '/img/perangkat/oya.jpg',
+                    foto: 'https://cdn-icons-png.flaticon.com/256/3135/3135715.png',
                 },
                 {
                     nama: 'Iday Rustandi',
@@ -82,7 +82,7 @@ const StrukturOrganisasiClient = () => {
                     nama: 'Engku Kuswanda',
                     jabatan: 'Kadus III',
                     sk: 'SK: 141.1/02/2017',
-                    foto: '/img/perangkat/elina.jpg',
+                    foto: '/engku.png',
                 },
             ],
         },
@@ -155,25 +155,15 @@ const StrukturOrganisasiClient = () => {
                             {/* Section Header */}
                             <div className='mb-12 text-center'>
                                 <h3 className='text-3xl font-bold text-gray-800 mb-4 relative inline-block'>
-                                    <span className='relative z-10 px-4'>
-                                        {section.kategori}
-                                    </span>
                                     <span className='absolute bottom-0 left-0 w-full h-2 bg-emerald-200/50 rounded-full -z-0'></span>
                                 </h3>
-                                <p className='text-gray-500 max-w-2xl mx-auto'>
-                                    {section.kategori === 'Kepala Desa'
-                                        ? 'Pemimpin utama desa yang bertanggung jawab atas penyelenggaraan pemerintahan'
-                                        : section.kategori === 'Perangkat Desa'
-                                        ? 'Tim profesional yang membantu kepala desa dalam menjalankan pemerintahan'
-                                        : 'Koordinator wilayah yang menjadi penghubung antara pemerintah desa dan masyarakat'}
-                                </p>
                             </div>
 
                             {/* Cards Grid */}
                             <div
                                 className={`grid gap-8 ${
                                     section.kategori === 'Kepala Desa'
-                                        ? 'justify-center lg:grid-cols-1 max-w-2xl mx-auto'
+                                        ? 'justify-center lg:grid-cols-1 max-w-md mx-auto'
                                         : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
                                 }`}
                             >
@@ -186,32 +176,76 @@ const StrukturOrganisasiClient = () => {
                                                 : ''
                                         }`}
                                     >
-                                        {/* Photo Section */}
-                                        <div className='relative h-72 sm:h-64 overflow-hidden bg-gray-100'>
+                                        {/* Photo Section - Portrait Height */}
+                                        <div
+                                            className={`relative overflow-hidden bg-gray-100 ${
+                                                section.kategori ===
+                                                'Kepala Desa'
+                                                    ? 'h-96' // Taller for Kepala Desa
+                                                    : 'h-80' // Slightly shorter for others
+                                            }`}
+                                        >
                                             {pejabat.foto ? (
                                                 <img
                                                     src={pejabat.foto}
                                                     alt={`Foto ${pejabat.nama}`}
-                                                    className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
+                                                    className={`w-full h-full object-cover ${
+                                                        section.kategori ===
+                                                        'Kepala Desa'
+                                                            ? 'object-top' // Focus on face for portrait
+                                                            : 'object-center'
+                                                    } transition-transform duration-500 group-hover:scale-105`}
                                                     onError={(e) => {
                                                         e.target.onerror = null
                                                         e.target.src = ''
                                                     }}
                                                 />
                                             ) : (
-                                                <div className='w-full h-full flex items-center justify-center bg-emerald-100'>
-                                                    <Users className='h-20 w-20 text-emerald-600' />
+                                                <div
+                                                    className={`w-full h-full flex items-center justify-center ${
+                                                        section.kategori ===
+                                                        'Kepala Desa'
+                                                            ? 'bg-emerald-100'
+                                                            : 'bg-gray-200'
+                                                    }`}
+                                                >
+                                                    <Users
+                                                        className={`${
+                                                            section.kategori ===
+                                                            'Kepala Desa'
+                                                                ? 'h-24 w-24 text-emerald-600'
+                                                                : 'h-20 w-20 text-gray-500'
+                                                        }`}
+                                                    />
                                                 </div>
+                                            )}
+                                            {section.kategori ===
+                                                'Kepala Desa' && (
+                                                <div className='absolute inset-0 bg-gradient-to-t from-black/20 to-transparent'></div>
                                             )}
                                         </div>
 
                                         {/* Info Section */}
                                         <div className='p-6'>
                                             <div className='mb-4'>
-                                                <h4 className='text-xl font-bold text-gray-800 mb-1'>
+                                                <h4
+                                                    className={`font-bold mb-1 ${
+                                                        section.kategori ===
+                                                        'Kepala Desa'
+                                                            ? 'text-2xl text-gray-800'
+                                                            : 'text-xl text-gray-800'
+                                                    }`}
+                                                >
                                                     {pejabat.nama}
                                                 </h4>
-                                                <p className='text-emerald-600 font-medium'>
+                                                <p
+                                                    className={`${
+                                                        section.kategori ===
+                                                        'Kepala Desa'
+                                                            ? 'text-emerald-600 font-semibold'
+                                                            : 'text-emerald-600 font-medium'
+                                                    }`}
+                                                >
                                                     {pejabat.jabatan}
                                                 </p>
                                             </div>

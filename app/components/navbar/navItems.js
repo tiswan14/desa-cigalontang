@@ -38,28 +38,6 @@ const navItems = [
         ],
     },
 
-    // {
-    //     href: '/lembaga-desa',
-    //     text: 'Lembaga Desa',
-    //     children: [
-    //         {
-    //             href: '/lembaga-desa/bpd',
-    //             text: 'Badan Permusyawaratan Desa (BPD)',
-    //         },
-    //         {
-    //             href: '/lembaga-desa/lpm',
-    //             text: 'Lembaga Pemberdayaan Masyarakat (LPM)',
-    //         },
-    //         {
-    //             href: '/lembaga-desa/mui',
-    //             text: 'Majelis Ulama Indonesia (MUI)',
-    //         },
-    //         {
-    //             href: '/lembaga-desa/karang-taruna',
-    //             text: 'Karang Taruna',
-    //         },
-    //     ],
-    // },
     {
         href: '/potensi-desa',
         text: 'Potensi Desa',
