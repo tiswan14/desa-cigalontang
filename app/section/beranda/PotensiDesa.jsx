@@ -1,4 +1,4 @@
-import { Sprout, PiggyBank, Hammer } from 'lucide-react'
+import { Sprout, PiggyBank, Leaf } from 'lucide-react'
 import Link from 'next/link'
 
 const PotensiDesa = () => {
@@ -16,6 +16,13 @@ const PotensiDesa = () => {
             href: '/potensi-desa/peternakan',
             description:
                 'Potensi peternakan sapi dan kambing yang dikelola secara modern dengan hasil susu dan daging berkualitas tinggi.',
+        },
+        {
+            icon: Leaf,
+            title: 'Perkebunan',
+            href: '/potensi-desa/perkebunan',
+            description:
+                'Perkebunan kelapa, pinang, lada, dan pala dengan potensi besar kopi dan kakao untuk ekonomi berkelanjutan.',
         },
     ]
 
@@ -35,7 +42,7 @@ const PotensiDesa = () => {
             </div>
 
             {/* Potensi Cards */}
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                 {potensiData.map((potensi, index) => (
                     <Link
                         href={potensi.href}

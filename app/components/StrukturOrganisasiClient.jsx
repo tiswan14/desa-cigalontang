@@ -70,7 +70,7 @@ const StrukturOrganisasiClient = () => {
                     nama: 'Oya',
                     jabatan: 'Kadus I',
                     sk: 'SK: 141.1/02/2017',
-                    foto: 'https://cdn-icons-png.flaticon.com/256/3135/3135715.png',
+                    foto: '/oya.png',
                 },
                 {
                     nama: 'Iday Rustandi',

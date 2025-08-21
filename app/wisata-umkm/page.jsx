@@ -33,9 +33,9 @@ const WisataUMKMDesa = () => {
 
         // Wisata Kuliner
         {
-            img: '/images/farmers-coffee.jpg',
+            img: '/farmer.jpg',
             title: 'Farmers Coffee Cigalontang',
-            kategori: 'Wisata Kuliner',
+            kategori: 'Produk Lokal',
             type: 'umkm',
             desc: 'Kopi berkualitas dengan cita rasa khas pegunungan Cigalontang',
             rating: 4.7,
@@ -129,7 +129,7 @@ const WisataUMKMDesa = () => {
 
         // Wisata - Aktivitas Desa
         {
-            img: '/images/ngulak-pangangonan.jpg',
+            img: '/pangangonan.jpg',
             title: 'Situ Pangangonan',
             kategori: 'Aktivitas Desa',
             type: 'wisata',
