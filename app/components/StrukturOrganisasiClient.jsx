@@ -61,6 +61,12 @@ const StrukturOrganisasiClient = () => {
                     sk: 'SK: 141.1/02/2017',
                     foto: '/rina.png',
                 },
+                {
+                    nama: 'Heri',
+                    jabatan: 'Staff Desa',
+                    sk: 'SK: 141.1/02/2017',
+                    foto: '/heri.png',
+                },
             ],
         },
         {

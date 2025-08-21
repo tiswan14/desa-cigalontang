@@ -53,52 +53,53 @@ const Footer = () => {
         },
         {
             icon: Clock,
-            content: 'Senin-Jumat: 08.00 - 16.00 WIB',
+            content: 'Senin - Jumat: 08.00 - 16.00 WIB',
         },
     ]
 
-    const socialLinks = [
-        {
-            href: 'https://facebook.com/pemdescigalontang',
-            icon: Facebook,
-            label: 'Facebook',
-            color: 'hover:bg-blue-100 hover:text-blue-600',
-        },
-        {
-            href: 'https://instagram.com/pemdescigalontang',
-            icon: Instagram,
-            label: 'Instagram',
-            color: 'hover:bg-pink-100 hover:text-pink-600',
-        },
-        {
-            href: 'https://twitter.com/pemdescigalontang',
-            icon: Twitter,
-            label: 'Twitter',
-            color: 'hover:bg-sky-100 hover:text-sky-600',
-        },
-        {
-            href: 'https://tiktok.com/@pemdescigalontang',
-            icon: () => (
-                <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='24'
-                    height='24'
-                    viewBox='0 0 24 24'
-                    fill='none'
-                    stroke='currentColor'
-                    strokeWidth='2'
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    className='w-5 h-5'
-                >
-                    <path d='M16.5 8a6.5 6.5 0 0 0-6.5-6.5v6.5h6.5Z' />
-                    <path d='M10 8v8a5 5 0 0 0 5 5h1.5' />
-                </svg>
-            ),
-            label: 'TikTok',
-            color: 'hover:bg-purple-100 hover:text-purple-600',
-        },
-    ]
+const socialLinks = [
+    {
+        href: 'https://facebook.com/pemdescigalontang',
+        icon: Facebook,
+        label: 'Facebook',
+        color: 'hover:bg-blue-100 hover:text-blue-600',
+    },
+    {
+        href: 'https://instagram.com/pemdescigalontang',
+        icon: Instagram,
+        label: 'Instagram @pemdescigalontang',
+        color: 'hover:bg-pink-100 hover:text-pink-600',
+    },
+    {
+        href: 'https://twitter.com/pemdescigalontang',
+        icon: Twitter,
+        label: 'Twitter',
+        color: 'hover:bg-sky-100 hover:text-sky-600',
+    },
+    {
+        href: 'https://tiktok.com/@pemdescigalontang',
+        icon: () => (
+            <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                strokeWidth='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                className='w-5 h-5'
+            >
+                <path d='M16.5 8a6.5 6.5 0 0 0-6.5-6.5v6.5h6.5Z' />
+                <path d='M10 8v8a5 5 0 0 0 5 5h1.5' />
+            </svg>
+        ),
+        label: 'TikTok',
+        color: 'hover:bg-purple-100 hover:text-purple-600',
+    },
+];
+
 
     return (
         <footer className='bg-gray-800 text-white'>
