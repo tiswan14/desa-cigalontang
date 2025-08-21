@@ -18,126 +18,51 @@ import {
 const WisataUMKMDesa = () => {
     const [activeFilter, setActiveFilter] = useState('all')
     const [viewMode, setViewMode] = useState('grid')
-
     const dataList = [
-        // Wisata Alam
-        {
-            img: '/images/ngalanglang.jpg',
-            title: 'Ngalanglang Karancagean Domba',
-            kategori: 'Wisata Alam',
-            type: 'wisata',
-            desc: 'Nikmati pemandangan alam yang indah dengan suasana pedesaan yang asri',
-            rating: 4.5,
-            location: 'Karancagean',
-        },
-
-        // Wisata Kuliner
         {
             img: '/farmer.jpg',
             title: 'Farmers Coffee Cigalontang',
             kategori: 'Produk Lokal',
             type: 'umkm',
             desc: 'Kopi berkualitas dengan cita rasa khas pegunungan Cigalontang',
-            rating: 4.7,
-            location: 'Dusun 3',
-        },
-        {
-            img: '/images/ngendang-rasa.jpg',
-            title: 'Ngendang Rasa',
-            kategori: 'Wisata Kuliner',
-            type: 'wisata',
-            desc: 'Warung makan dengan menu tradisional Sunda yang autentik',
-            rating: 4.3,
-            location: 'Jl. Raya Cigalontang',
-        },
-        {
-            img: '/images/seren-manis.jpg',
-            title: 'Seren Manis',
-            kategori: 'Wisata Kuliner',
-            type: 'wisata',
-            desc: 'Kuliner manis tradisional dengan resep turun temurun',
-            rating: 4.6,
-            location: 'Kampung Seren',
-        },
-
-        // UMKM - Kerajinan Tangan
-        {
-            img: '/images/anyaman-tatih.jpg',
-            title: 'Anyaman Bu Tatih',
-            kategori: 'Kerajinan Tangan',
-            type: 'umkm',
-            desc: 'Kerajinan anyaman bambu berkualitas tinggi dengan desain tradisional',
-            price: 'Rp 25.000 - 150.000',
-            contact: '081234567890',
-        },
-        {
-            img: '/images/anyaman-amar.jpg',
-            title: 'Anyaman Ki Amar',
-            kategori: 'Kerajinan Tangan',
-            type: 'umkm',
-            desc: 'Produk anyaman dengan variasi modern dan tradisional',
-            price: 'Rp 30.000 - 200.000',
-            contact: '081234567891',
-        },
-
-        // UMKM - Produk Lokal
-        {
-            img: '/images/gula-aren-popong.jpg',
-            title: 'Gula Aren Bu Popong',
-            kategori: 'Produk Lokal',
-            type: 'umkm',
-            desc: 'Gula aren murni tanpa campuran bahan kimia',
-            price: 'Rp 15.000 - 35.000',
-            contact: '081234567892',
-        },
-        {
-            img: '/images/gula-aren-sarim.jpg',
-            title: 'Gula Aren Pak Sarim',
-            kategori: 'Produk Lokal',
-            type: 'umkm',
-            desc: 'Gula aren premium dengan kualitas terjamin',
-            price: 'Rp 18.000 - 40.000',
-            contact: '081234567893',
-        },
-        {
-            img: '/images/ketan-hitam-perdi.jpg',
-            title: 'Ketan Hitam Pak Perdi',
-            kategori: 'Produk Lokal',
-            type: 'umkm',
-            desc: 'Olahan ketan hitam tradisional dengan cita rasa khas',
-            price: 'Rp 12.000 - 25.000',
-            contact: '081234567894',
-        },
-        {
-            img: '/images/ketan-hitam-momo.jpg',
-            title: 'Ketan Hitam Hj Momo',
-            kategori: 'Produk Lokal',
-            type: 'umkm',
-            desc: 'Ketan hitam dengan berbagai varian topping menarik',
-            price: 'Rp 10.000 - 30.000',
-            contact: '081234567895',
-        },
-        {
-            img: '/images/ranggining.jpg',
-            title: 'Pengolahan Ranggining',
-            kategori: 'Produk Lokal',
-            type: 'umkm',
-            desc: 'Produk ranggining tradisional dengan proses alami',
             price: 'Rp 20.000 - 50.000',
-            contact: '081234567896',
+            contact: '6281234567890',
         },
-
-        // Wisata - Aktivitas Desa
+        {
+            img: '/gula-aren-apid-logo.jpg',
+            title: 'Gula Aren Cigun Pak Apid',
+            kategori: 'Produk Lokal',
+            type: 'umkm',
+            desc: 'Gula aren murni tanpa campuran bahan kimia, diolah secara tradisional dengan rasa manis alami yang menyehatkan',
+            price: 'Rp 15.000 - 35.000',
+            contact: '6282378409311',
+        },
         {
             img: '/pangangonan.jpg',
             title: 'Situ Pangangonan',
-            kategori: 'Aktivitas Desa',
+            kategori: 'Wisata',
             type: 'wisata',
             desc: 'Situ Pangangonan, danau alami dengan suasana asri dan menenangkan.',
             rating: 4.4,
-            location: 'Dusun 3',
+            location:
+                'https://www.google.com/maps?q=Situ+Pangangonan+Nyalindung',
         },
     ]
+
+    // Fungsi untuk mengarahkan ke WhatsApp
+    const handleContactSeller = (phoneNumber) => {
+        const message =
+            'Halo, saya tertarik dengan produk Anda. Bisa info lebih lanjut?'
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+            message
+        )}`
+        window.open(whatsappUrl, '_blank')
+    }
+
+    // Fungsi untuk mengarahkan ke Google Maps
+    const handleViewLocation = (mapsUrl) => {
+        window.open(mapsUrl, '_blank')
+    }
 
     const categories = [
         { id: 'all', name: 'Semua', count: dataList.length },
@@ -235,7 +160,7 @@ const WisataUMKMDesa = () => {
                                 </div>
                             </div>
                             <div className='bg-white/15 backdrop-blur-sm rounded-xl px-4 py-3 border border-white/20'>
-                                <div className='text-2xl font-bold'>5</div>
+                                <div className='text-2xl font-bold'>2</div>
                                 <div className='text-emerald-200 text-sm'>
                                     Kategori
                                 </div>
@@ -388,13 +313,20 @@ const WisataUMKMDesa = () => {
                                             </div>
                                             <div className='flex items-center space-x-1 text-gray-500'>
                                                 <MapPin className='w-4 h-4' />
-                                                <span>{item.location}</span>
+                                                <span>Lihat di Maps</span>
                                             </div>
                                         </div>
-                                        {/* <button className='w-full bg-blue-50 text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-100 transition-colors text-sm font-medium flex items-center justify-center space-x-2'>
+                                        <button
+                                            onClick={() =>
+                                                handleViewLocation(
+                                                    item.location
+                                                )
+                                            }
+                                            className='cursor-pointer w-full bg-blue-50 text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-100 transition-colors text-sm font-medium flex items-center justify-center space-x-2'
+                                        >
                                             <Eye className='w-4 h-4' />
-                                            <span>Lihat Detail</span>
-                                        </button> */}
+                                            <span>Lihat Lokasi</span>
+                                        </button>
                                     </div>
                                 )}
 
@@ -410,7 +342,14 @@ const WisataUMKMDesa = () => {
                                                 <span>{item.contact}</span>
                                             </div>
                                         </div>
-                                        <button className='w-full bg-orange-50 text-orange-600 py-2 px-4 rounded-lg hover:bg-orange-100 transition-colors text-sm font-medium flex items-center justify-center space-x-2'>
+                                        <button
+                                            onClick={() =>
+                                                handleContactSeller(
+                                                    item.contact
+                                                )
+                                            }
+                                            className='cursor-pointer w-full bg-orange-50 text-orange-600 py-2 px-4 rounded-lg hover:bg-orange-100 transition-colors text-sm font-medium flex items-center justify-center space-x-2'
+                                        >
                                             <ShoppingBag className='w-4 h-4' />
                                             <span>Hubungi Penjual</span>
                                         </button>

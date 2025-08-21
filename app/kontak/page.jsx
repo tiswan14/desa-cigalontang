@@ -86,8 +86,8 @@ export default function ContactPage() {
 
             {/* Main Content */}
             <div className='container mx-auto px-4 py-24 -mt-16 relative z-10'>
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
-                    {/* Contact Information */}
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+                    {/* Contact Information - Kiri */}
                     <div className='bg-white rounded-xl shadow-lg p-8 border border-emerald-100'>
                         <h2 className='text-2xl font-bold text-emerald-800 mb-6'>
                             Informasi Kontak
@@ -132,7 +132,7 @@ export default function ContactPage() {
                                         Email
                                     </h3>
                                     <p className='text-gray-600'>
-                                        desacigalontang@email.com
+                                        pemdescigalontang@email.com
                                     </p>
                                 </div>
                             </div>
@@ -151,83 +151,23 @@ export default function ContactPage() {
                                 </div>
                             </div>
                         </div>
-
-                        {/* Google Maps Embed */}
-                        <div className='mt-8 rounded-xl overflow-hidden border border-gray-200'>
-                            <iframe
-                                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.254501234792!2d108.08439207499613!3d-7.349675992654183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f578cd79c1d71%3A0x1e4b77b74b3a41e7!2sCigalontang%2C%20Tasikmalaya%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1691756234567!5m2!1sen!2sid'
-                                width='600'
-                                height='450'
-                                style={{ border: 0 }}
-                                allowFullScreen=''
-                                loading='lazy'
-                                referrerPolicy='no-referrer-when-downgrade'
-                            />
-                        </div>
                     </div>
 
-                    {/* Contact Form */}
+                    {/* Google Maps Embed - Kanan */}
                     <div className='bg-white rounded-xl shadow-lg p-8 border border-emerald-100'>
                         <h2 className='text-2xl font-bold text-emerald-800 mb-6'>
-                            Kirim Pesan
+                            Lokasi Kantor Desa
                         </h2>
-
-                        <form className='space-y-6'>
-                            <div>
-                                <label
-                                    htmlFor='name'
-                                    className='block text-sm font-medium text-gray-700 mb-1'
-                                >
-                                    Nama Lengkap
-                                </label>
-                                <input
-                                    type='text'
-                                    id='name'
-                                    name='name'
-                                    className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition'
-                                    placeholder='Masukkan nama lengkap'
-                                />
-                            </div>
-
-                            <div>
-                                <label
-                                    htmlFor='email'
-                                    className='block text-sm font-medium text-gray-700 mb-1'
-                                >
-                                    Alamat Email
-                                </label>
-                                <input
-                                    type='email'
-                                    id='email'
-                                    name='email'
-                                    className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition'
-                                    placeholder='Masukkan alamat email'
-                                />
-                            </div>
-
-                            <div>
-                                <label
-                                    htmlFor='message'
-                                    className='block text-sm font-medium text-gray-700 mb-1'
-                                >
-                                    Pesan
-                                </label>
-                                <textarea
-                                    id='message'
-                                    name='message'
-                                    rows='5'
-                                    className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition'
-                                    placeholder='Tulis pesan Anda di sini...'
-                                ></textarea>
-                            </div>
-
-                            <button
-                                type='submit'
-                                className='w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-300 shadow-md hover:shadow-lg'
-                            >
-                                Kirim Pesan
-                            </button>
-                        </form>
+                        <div className='rounded-xl overflow-hidden border border-gray-200'>
+                            <iframe
+                                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.254501234792!2d108.08439207499613!3d-7.349675992654183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f578cd79c1d71%3A0x1e4b77b74b3a41e7!2sCigalontang%2C%20Tasikmalaya%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1691756234567!5m2!1sen!2sid'
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading='lazy'
+                                referrerPolicy='no-referrer-when-downgrade'
+                                className='w-full h-[400px]'
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

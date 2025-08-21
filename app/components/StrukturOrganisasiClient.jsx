@@ -125,26 +125,6 @@ const StrukturOrganisasiClient = () => {
             <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-12'>
                 <div className='max-w-7xl mx-auto'>
                     {/* Introduction Card */}
-                    <div className='bg-white rounded-xl shadow-xl p-8 mb-16 relative overflow-hidden border border-gray-100'>
-                        <div className='absolute -top-10 -right-10 w-32 h-32 rounded-full bg-emerald-100/30 blur-3xl'></div>
-                        <div className='flex flex-col md:flex-row items-center'>
-                            <div className='w-24 h-24 bg-emerald-100 rounded-xl flex items-center justify-center mb-6 md:mb-0 md:mr-8 flex-shrink-0'>
-                                <Users className='h-12 w-12 text-emerald-600' />
-                            </div>
-                            <div>
-                                <h2 className='text-2xl md:text-3xl font-bold text-gray-800 mb-4'>
-                                    Struktur Pemerintahan Desa
-                                </h2>
-                                <p className='text-gray-600 leading-relaxed'>
-                                    Berikut adalah struktur lengkap pemerintahan
-                                    Desa Cigalontang yang terdiri dari kepala
-                                    desa, perangkat desa, dan kepala dusun yang
-                                    bertugas melayani masyarakat dengan dedikasi
-                                    dan profesionalisme.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
 
                     {/* Structure Sections */}
                     {strukturPemerintahan.map((section, index) => (
