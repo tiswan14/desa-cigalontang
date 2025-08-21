@@ -47,6 +47,15 @@ const WisataUMKMDesa = () => {
             location:
                 'https://www.google.com/maps?q=Situ+Pangangonan+Nyalindung',
         },
+        {
+            img: '/kujang.jpg',
+            title: 'Pandai besi Cipta Mandiri',
+            kategori: 'Produk Lokal',
+            type: 'umkm',
+            desc: 'Pandai besi Cipta Mandiri, pengrajin tradisional yang menghasilkan alat pertanian dan perkakas berkualitas.',
+            rating: 4.4,
+            contact: '6282119787430',
+        }
     ]
 
     // Fungsi untuk mengarahkan ke WhatsApp
@@ -324,7 +333,7 @@ const WisataUMKMDesa = () => {
                                             }
                                             className='cursor-pointer w-full bg-blue-50 text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-100 transition-colors text-sm font-medium flex items-center justify-center space-x-2'
                                         >
-                                            <Eye className='w-4 h-4' />
+                                            <MapPin className='w-4 h-4' />
                                             <span>Lihat Lokasi</span>
                                         </button>
                                     </div>
